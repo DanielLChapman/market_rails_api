@@ -24,8 +24,13 @@ Shoulda::Matchers.configure do |config|
 end
 
 RSpec.configure do |config|
-  config.include Devise::TestHelpers, type: :controller
+  	config.include Devise::TestHelpers, type: :controller
 	config.include Request::JsonHelpers, :type => :controller
+	config.include Request::HeadersHelpers, :type => :controller
+
+	config.before(:each, type: :controller) do
+		include_default_accept_headers
+	end
   # ## Mock Framework
   #
   # If you prefer to use mocha, flexmock or RR, uncomment the appropriate line:
