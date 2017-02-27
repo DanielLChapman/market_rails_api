@@ -8,4 +8,8 @@ module Authenticable
 		render json: {errors: "Not Authneticated" },
 					status: :unauthorized unless current_user.present?
 	end
+	
+	def user_signed_in?
+		current_user.present?
+	end
 end

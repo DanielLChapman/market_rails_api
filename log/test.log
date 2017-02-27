@@ -3874,3 +3874,338 @@ Processing by Api::V1::UsersController#update as application/vnd.marketplace.v1
 [active_model_serializers] Rendered ActiveModel::Serializer::Null with User (0.21ms)
 Completed 200 OK in 4ms (Views: 0.7ms | ActiveRecord: 0.6ms)
   [1m[35m (0.6ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.5ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."auth_token" IS NULL LIMIT 1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'shanae.swaniawski@hirthemarvin.info' LIMIT 1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."auth_token" = 'vDediuvXa9BD3AbtWy6N' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (1.4ms)[0m  [1mINSERT INTO "users" ("auth_token", "created_at", "email", "encrypted_password", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["auth_token", "vDediuvXa9BD3AbtWy6N"], ["created_at", Mon, 27 Feb 2017 22:22:56 UTC +00:00], ["email", "shanae.swaniawski@hirthemarvin.info"], ["encrypted_password", "$2a$04$Pn6ZQ8qMntt2ttL2Gq0zpu8EHwHVaeNUxrzL/t4EgthFADp.HAjuK"], ["updated_at", Mon, 27 Feb 2017 22:22:56 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.4ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."auth_token" IS NULL LIMIT 1
+  [1m[36mUser Exists (0.0ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'agatha.bradtke@hettingerhuel.name' LIMIT 1[0m
+  [1m[35mUser Exists (0.0ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."auth_token" = 'xaxg3sUoRSUxFywP4SQi' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("auth_token", "created_at", "email", "encrypted_password", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["auth_token", "xaxg3sUoRSUxFywP4SQi"], ["created_at", Mon, 27 Feb 2017 22:22:56 UTC +00:00], ["email", "agatha.bradtke@hettingerhuel.name"], ["encrypted_password", "$2a$04$xSbTzdF9FtgHFSKFLVkwgu3S/r3vd1zCIlWsBSDoeGDn/cj34/BSa"], ["updated_at", Mon, 27 Feb 2017 22:22:56 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.3ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."auth_token" IS NULL LIMIT 1
+  [1m[36mUser Exists (0.0ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'lona_zulauf@beer.ca' LIMIT 1[0m
+  [1m[35mUser Exists (0.0ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."auth_token" = 'CsExudx3s7XzAxVoRy_y' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "users" ("auth_token", "created_at", "email", "encrypted_password", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["auth_token", "CsExudx3s7XzAxVoRy_y"], ["created_at", Mon, 27 Feb 2017 22:22:56 UTC +00:00], ["email", "lona_zulauf@beer.ca"], ["encrypted_password", "$2a$04$wLl3YEScnF28W8pPQ6LdY.MhPNrATAyQxjBpVOP6Om7L578EJNnya"], ["updated_at", Mon, 27 Feb 2017 22:22:56 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.4ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."auth_token" IS NULL LIMIT 1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'dixie@denesik.com' LIMIT 1[0m
+  [1m[35mUser Exists (0.0ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."auth_token" = 'vzRUx4xvzGGocz9-uUzZ' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("auth_token", "created_at", "email", "encrypted_password", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["auth_token", "vzRUx4xvzGGocz9-uUzZ"], ["created_at", Mon, 27 Feb 2017 22:22:56 UTC +00:00], ["email", "dixie@denesik.com"], ["encrypted_password", "$2a$04$aAAx3TEPDV0nhtON038cy.RS15gLQB9xEyYRg7x3JL4n.Gl6rzlL2"], ["updated_at", Mon, 27 Feb 2017 22:22:56 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.3ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."auth_token" IS NULL LIMIT 1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'gloria@raugulgowski.co.uk' LIMIT 1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."auth_token" = 'YnpJ1T44FvTBmw58GFTH' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("auth_token", "created_at", "email", "encrypted_password", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["auth_token", "YnpJ1T44FvTBmw58GFTH"], ["created_at", Mon, 27 Feb 2017 22:22:56 UTC +00:00], ["email", "gloria@raugulgowski.co.uk"], ["encrypted_password", "$2a$04$ugYhMCqLU5f3zZJ0mtCTVeUzqGSGA5aqQi2OoHpuINNtFaTIwiMtW"], ["updated_at", Mon, 27 Feb 2017 22:22:56 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."auth_token" = 'YnpJ1T44FvTBmw58GFTH' LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."auth_token" IS NULL LIMIT 1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'emerita_herman@lind.biz' LIMIT 1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."auth_token" = 'FzBXusq9YyoaHqbvqmmH' LIMIT 1[0m
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("auth_token", "created_at", "email", "encrypted_password", "updated_at") VALUES (?, ?, ?, ?, ?)  [["auth_token", "FzBXusq9YyoaHqbvqmmH"], ["created_at", Mon, 27 Feb 2017 22:22:56 UTC +00:00], ["email", "emerita_herman@lind.biz"], ["encrypted_password", "$2a$04$tmmZz9UPjC9b98WhNfCNue65.305kbC6Qkkx66UnUKzJZYz5CYtb."], ["updated_at", Mon, 27 Feb 2017 22:22:56 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by Api::V1::UsersController#show as application/vnd.marketplace.v1
+  Parameters: {"id"=>"1", "user"=>{}}
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."auth_token" IS NULL LIMIT 1[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with User (0.48ms)
+Completed 200 OK in 15ms (Views: 4.4ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.4ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."auth_token" IS NULL LIMIT 1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'chris@jakubowski.us' LIMIT 1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."auth_token" = 'WdibhRy6Len2sips-B-J' LIMIT 1[0m
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("auth_token", "created_at", "email", "encrypted_password", "updated_at") VALUES (?, ?, ?, ?, ?)  [["auth_token", "WdibhRy6Len2sips-B-J"], ["created_at", Mon, 27 Feb 2017 22:22:56 UTC +00:00], ["email", "chris@jakubowski.us"], ["encrypted_password", "$2a$04$d.4kiRx30eZc1zyHtD9mWex7WJPa/944S1f5GObM3aPjkxMyIJPoO"], ["updated_at", Mon, 27 Feb 2017 22:22:56 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by Api::V1::UsersController#show as application/vnd.marketplace.v1
+  Parameters: {"id"=>"1", "user"=>{}}
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."auth_token" IS NULL LIMIT 1[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with User (0.36ms)
+Completed 200 OK in 2ms (Views: 0.8ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.4ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Processing by Api::V1::UsersController#create as application/vnd.marketplace.v1
+  Parameters: {"user"=>{"password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."auth_token" IS NULL LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."auth_token" IS NULL LIMIT 1[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.13ms)
+Completed 422 Unprocessable Entity in 16ms (Views: 1.3ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Processing by Api::V1::UsersController#create as application/vnd.marketplace.v1
+  Parameters: {"user"=>{"password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."auth_token" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."auth_token" IS NULL LIMIT 1[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.09ms)
+Completed 422 Unprocessable Entity in 4ms (Views: 0.6ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Processing by Api::V1::UsersController#create as application/vnd.marketplace.v1
+  Parameters: {"user"=>{"email"=>"sharell@pacocha.co.uk", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."auth_token" IS NULL LIMIT 1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'sharell@pacocha.co.uk' LIMIT 1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."auth_token" = 'J5guweFbVAv85NbdEkHn' LIMIT 1[0m
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("auth_token", "created_at", "email", "encrypted_password", "updated_at") VALUES (?, ?, ?, ?, ?)  [["auth_token", "J5guweFbVAv85NbdEkHn"], ["created_at", Mon, 27 Feb 2017 22:22:56 UTC +00:00], ["email", "sharell@pacocha.co.uk"], ["encrypted_password", "$2a$04$Yfwm8TFEG.yY4yTPNtl04uePMCcCW8V3YW8JbkIpIIfs.J/lfE53."], ["updated_at", Mon, 27 Feb 2017 22:22:56 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."auth_token" IS NULL LIMIT 1
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with User (0.36ms)
+Completed 201 Created in 6ms (Views: 1.3ms | ActiveRecord: 0.8ms)
+  [1m[36m (0.3ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by Api::V1::UsersController#create as application/vnd.marketplace.v1
+  Parameters: {"user"=>{"email"=>"ta_simonis@torphyschowalter.ca", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."auth_token" IS NULL LIMIT 1
+  [1m[36mUser Exists (0.0ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'ta_simonis@torphyschowalter.ca' LIMIT 1[0m
+  [1m[35mUser Exists (0.0ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."auth_token" = '2UJsVNC-d6cBdj912zq6' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("auth_token", "created_at", "email", "encrypted_password", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["auth_token", "2UJsVNC-d6cBdj912zq6"], ["created_at", Mon, 27 Feb 2017 22:22:56 UTC +00:00], ["email", "ta_simonis@torphyschowalter.ca"], ["encrypted_password", "$2a$04$OP5DoE6FBCopjuYwIZtQQeY4bZv3vMN.BUyGT1zGEq/fvLIRF5vKa"], ["updated_at", Mon, 27 Feb 2017 22:22:56 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."auth_token" IS NULL LIMIT 1[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with User (0.18ms)
+Completed 201 Created in 5ms (Views: 0.9ms | ActiveRecord: 0.6ms)
+  [1m[35m (0.3ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."auth_token" IS NULL LIMIT 1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'junita@kiehn.com' LIMIT 1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."auth_token" = 'z9MMTabS3j_LJyQ3weWy' LIMIT 1[0m
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "users" ("auth_token", "created_at", "email", "encrypted_password", "updated_at") VALUES (?, ?, ?, ?, ?)  [["auth_token", "z9MMTabS3j_LJyQ3weWy"], ["created_at", Mon, 27 Feb 2017 22:22:56 UTC +00:00], ["email", "junita@kiehn.com"], ["encrypted_password", "$2a$04$qu7lYa8Yd0hgcWETvaowpu4ZdHDqQJEeRSCfAuMOj6IROIp4kGe3a"], ["updated_at", Mon, 27 Feb 2017 22:22:56 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."auth_token" IS NULL LIMIT 1[0m
+  [1m[35mUser Exists (0.0ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'cuc@hilll.co.uk' LIMIT 1
+  [1m[36mUser Exists (0.0ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."auth_token" = 'EDNXYXRz_FK4mrjeHsmU' LIMIT 1[0m
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("auth_token", "created_at", "email", "encrypted_password", "updated_at") VALUES (?, ?, ?, ?, ?)  [["auth_token", "EDNXYXRz_FK4mrjeHsmU"], ["created_at", Mon, 27 Feb 2017 22:22:56 UTC +00:00], ["email", "cuc@hilll.co.uk"], ["encrypted_password", "$2a$04$ybggsH7noJDU9LhgJFjguOwv5slNUQmolGjhYqXsV2K8bsiGmtF7."], ["updated_at", Mon, 27 Feb 2017 22:22:56 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by Api::V1::UsersController#destroy as application/vnd.marketplace.v1
+  Parameters: {"id"=>"2", "user"=>{}}
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."auth_token" = 'EDNXYXRz_FK4mrjeHsmU' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "users" WHERE "users"."id" = ?  [["id", 2]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Completed 204 No Content in 1ms (ActiveRecord: 0.2ms)
+  [1m[35m (3.4ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."auth_token" IS NULL LIMIT 1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'cheryl.ferry@dickinson.name' LIMIT 1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."auth_token" = 'JJEFxRx-a3shjpzdQfCB' LIMIT 1[0m
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "users" ("auth_token", "created_at", "email", "encrypted_password", "updated_at") VALUES (?, ?, ?, ?, ?)  [["auth_token", "JJEFxRx-a3shjpzdQfCB"], ["created_at", Mon, 27 Feb 2017 22:22:56 UTC +00:00], ["email", "cheryl.ferry@dickinson.name"], ["encrypted_password", "$2a$04$tfXtB5ADGlFdppb8SaM5QOAYO0m8ZHIa2lXyhw4DVmDrPzO7jGxmC"], ["updated_at", Mon, 27 Feb 2017 22:22:56 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by Api::V1::UsersController#update as application/vnd.marketplace.v1
+  Parameters: {"user"=>{"email"=>"bademail.com"}, "id"=>"1"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."auth_token" = 'JJEFxRx-a3shjpzdQfCB' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT 1 AS one FROM "users" WHERE ("users"."auth_token" = 'JJEFxRx-a3shjpzdQfCB' AND "users"."id" != 1) LIMIT 1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE ("users"."email" = 'bademail.com' AND "users"."id" != 1) LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.09ms)
+Completed 422 Unprocessable Entity in 3ms (Views: 0.3ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.4ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."auth_token" IS NULL LIMIT 1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'kim_ankunding@dooley.name' LIMIT 1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."auth_token" = '6y9kAJG3NmduUb59H1os' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("auth_token", "created_at", "email", "encrypted_password", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["auth_token", "6y9kAJG3NmduUb59H1os"], ["created_at", Mon, 27 Feb 2017 22:22:56 UTC +00:00], ["email", "kim_ankunding@dooley.name"], ["encrypted_password", "$2a$04$9kmE6q9HoR/0VkWL5/lEWe/fHQYKlzVcd9gKDyHO5t6gVdFnJ1GoC"], ["updated_at", Mon, 27 Feb 2017 22:22:56 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by Api::V1::UsersController#update as application/vnd.marketplace.v1
+  Parameters: {"user"=>{"email"=>"bademail.com"}, "id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."auth_token" = '6y9kAJG3NmduUb59H1os' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE ("users"."auth_token" = '6y9kAJG3NmduUb59H1os' AND "users"."id" != 1) LIMIT 1[0m
+  [1m[35mUser Exists (0.0ms)[0m  SELECT 1 AS one FROM "users" WHERE ("users"."email" = 'bademail.com' AND "users"."id" != 1) LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.09ms)
+Completed 422 Unprocessable Entity in 3ms (Views: 0.3ms | ActiveRecord: 0.3ms)
+  [1m[35m (8.7ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."auth_token" IS NULL LIMIT 1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'jacki_hermiston@westleuschke.ca' LIMIT 1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."auth_token" = 'd6Uj82z3JwtU3P-oVdDg' LIMIT 1[0m
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("auth_token", "created_at", "email", "encrypted_password", "updated_at") VALUES (?, ?, ?, ?, ?)  [["auth_token", "d6Uj82z3JwtU3P-oVdDg"], ["created_at", Mon, 27 Feb 2017 22:22:56 UTC +00:00], ["email", "jacki_hermiston@westleuschke.ca"], ["encrypted_password", "$2a$04$CdBtnda6/0wEstm2aHl/cuzlhvC6RpUOwLQsodMiRrbQwxLLryr6."], ["updated_at", Mon, 27 Feb 2017 22:22:56 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by Api::V1::UsersController#update as application/vnd.marketplace.v1
+  Parameters: {"user"=>{"email"=>"bademail.com"}, "id"=>"1"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."auth_token" = 'd6Uj82z3JwtU3P-oVdDg' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT 1 AS one FROM "users" WHERE ("users"."auth_token" = 'd6Uj82z3JwtU3P-oVdDg' AND "users"."id" != 1) LIMIT 1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE ("users"."email" = 'bademail.com' AND "users"."id" != 1) LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.09ms)
+Completed 422 Unprocessable Entity in 3ms (Views: 0.3ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.4ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."auth_token" IS NULL LIMIT 1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'cedric.stehr@cassin.biz' LIMIT 1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."auth_token" = 'WGz9wQ3y4tkERGs7U6v6' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("auth_token", "created_at", "email", "encrypted_password", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["auth_token", "WGz9wQ3y4tkERGs7U6v6"], ["created_at", Mon, 27 Feb 2017 22:22:56 UTC +00:00], ["email", "cedric.stehr@cassin.biz"], ["encrypted_password", "$2a$04$KK08nzsTA90HFZMpAxiDmuGZSDNmQJHMiws8WT1AJR2vbJhlvFkVS"], ["updated_at", Mon, 27 Feb 2017 22:22:56 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by Api::V1::UsersController#update as application/vnd.marketplace.v1
+  Parameters: {"user"=>{"email"=>"newmail@example.com"}, "id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."auth_token" = 'WGz9wQ3y4tkERGs7U6v6' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE ("users"."auth_token" = 'WGz9wQ3y4tkERGs7U6v6' AND "users"."id" != 1) LIMIT 1[0m
+  [1m[35mUser Exists (0.0ms)[0m  SELECT 1 AS one FROM "users" WHERE ("users"."email" = 'newmail@example.com' AND "users"."id" != 1) LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "users" SET "email" = ?, "updated_at" = ? WHERE "users"."id" = 1[0m  [["email", "newmail@example.com"], ["updated_at", Mon, 27 Feb 2017 22:22:56 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with User (0.22ms)
+Completed 200 OK in 4ms (Views: 0.8ms | ActiveRecord: 0.6ms)
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."auth_token" IS NULL LIMIT 1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'nikole@littleblanda.co.uk' LIMIT 1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."auth_token" = '6trc-M1J9Xv-VqpKofKD' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "users" ("auth_token", "created_at", "email", "encrypted_password", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["auth_token", "6trc-M1J9Xv-VqpKofKD"], ["created_at", Mon, 27 Feb 2017 22:22:56 UTC +00:00], ["email", "nikole@littleblanda.co.uk"], ["encrypted_password", "$2a$04$umeJxAj9q6tdQucj0GAAQOFZR4bC.6YicGNCbbJNa7F191sds4UHW"], ["updated_at", Mon, 27 Feb 2017 22:22:56 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by Api::V1::UsersController#update as application/vnd.marketplace.v1
+  Parameters: {"user"=>{"email"=>"newmail@example.com"}, "id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."auth_token" = '6trc-M1J9Xv-VqpKofKD' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE ("users"."auth_token" = '6trc-M1J9Xv-VqpKofKD' AND "users"."id" != 1) LIMIT 1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT 1 AS one FROM "users" WHERE ("users"."email" = 'newmail@example.com' AND "users"."id" != 1) LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "users" SET "email" = ?, "updated_at" = ? WHERE "users"."id" = 1[0m  [["email", "newmail@example.com"], ["updated_at", Mon, 27 Feb 2017 22:22:56 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with User (0.21ms)
+Completed 200 OK in 3ms (Views: 0.8ms | ActiveRecord: 0.5ms)
+  [1m[36m (4.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."auth_token" IS NULL LIMIT 1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'odette@ziemann.info' LIMIT 1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."auth_token" = 'sQx-F_58NAsQRNnpcN4C' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "users" ("auth_token", "created_at", "email", "encrypted_password", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["auth_token", "sQx-F_58NAsQRNnpcN4C"], ["created_at", Mon, 27 Feb 2017 22:22:56 UTC +00:00], ["email", "odette@ziemann.info"], ["encrypted_password", "$2a$04$7E7/g1uySpKSHQbUw9IApuzmX0nIQp78bug06Yl14ZXJkTHsFrcg6"], ["updated_at", Mon, 27 Feb 2017 22:22:56 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by Api::V1::SessionsController#create as application/vnd.marketplace.v1
+  Parameters: {"session"=>{"email"=>"odette@ziemann.info", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" = 'odette@ziemann.info' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "last_sign_in_ip" = ?, "current_sign_in_ip" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = 1[0m  [["last_sign_in_at", Mon, 27 Feb 2017 22:22:56 UTC +00:00], ["current_sign_in_at", Mon, 27 Feb 2017 22:22:56 UTC +00:00], ["last_sign_in_ip", "0.0.0.0"], ["current_sign_in_ip", "0.0.0.0"], ["sign_in_count", 1], ["updated_at", Mon, 27 Feb 2017 22:22:56 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."auth_token" = 'PoJp69YxuJkfsJ54V7As' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE ("users"."auth_token" = 'PoJp69YxuJkfsJ54V7As' AND "users"."id" != 1) LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "users" SET "auth_token" = ?, "updated_at" = ? WHERE "users"."id" = 1  [["auth_token", "PoJp69YxuJkfsJ54V7As"], ["updated_at", Mon, 27 Feb 2017 22:22:56 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."auth_token" IS NULL LIMIT 1
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with User (0.25ms)
+Completed 200 OK in 8ms (Views: 1.1ms | ActiveRecord: 1.2ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.7ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."auth_token" IS NULL LIMIT 1[0m
+  [1m[35mUser Exists (0.0ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'clotilde@streichbartoletti.biz' LIMIT 1
+  [1m[36mUser Exists (0.0ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."auth_token" = 'xrqxLrxpKxUtjkg9F5KR' LIMIT 1[0m
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("auth_token", "created_at", "email", "encrypted_password", "updated_at") VALUES (?, ?, ?, ?, ?)  [["auth_token", "xrqxLrxpKxUtjkg9F5KR"], ["created_at", Mon, 27 Feb 2017 22:22:56 UTC +00:00], ["email", "clotilde@streichbartoletti.biz"], ["encrypted_password", "$2a$04$LteNoP.gFnxXHQ3Tbubfe.xo0YKOgyPi1ZQXRqoixPUFsgcP4qHKC"], ["updated_at", Mon, 27 Feb 2017 22:22:56 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by Api::V1::SessionsController#create as application/vnd.marketplace.v1
+  Parameters: {"session"=>{"email"=>"clotilde@streichbartoletti.biz", "password"=>"[FILTERED]"}}
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."email" = 'clotilde@streichbartoletti.biz' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "last_sign_in_ip" = ?, "current_sign_in_ip" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = 1  [["last_sign_in_at", Mon, 27 Feb 2017 22:22:56 UTC +00:00], ["current_sign_in_at", Mon, 27 Feb 2017 22:22:56 UTC +00:00], ["last_sign_in_ip", "0.0.0.0"], ["current_sign_in_ip", "0.0.0.0"], ["sign_in_count", 1], ["updated_at", Mon, 27 Feb 2017 22:22:56 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.0ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."auth_token" = 'nAsVwELkj_ghAoim-MPN' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM "users" WHERE ("users"."auth_token" = 'nAsVwELkj_ghAoim-MPN' AND "users"."id" != 1) LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "users" SET "auth_token" = ?, "updated_at" = ? WHERE "users"."id" = 1[0m  [["auth_token", "nAsVwELkj_ghAoim-MPN"], ["updated_at", Mon, 27 Feb 2017 22:22:56 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."auth_token" IS NULL LIMIT 1[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with User (0.39ms)
+Completed 200 OK in 7ms (Views: 1.5ms | ActiveRecord: 1.1ms)
+  [1m[35m (0.5ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."auth_token" IS NULL LIMIT 1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'vicenta.effertz@schneider.ca' LIMIT 1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."auth_token" = 'VRS7odYPYMv1mn6imL-J' LIMIT 1[0m
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("auth_token", "created_at", "email", "encrypted_password", "updated_at") VALUES (?, ?, ?, ?, ?)  [["auth_token", "VRS7odYPYMv1mn6imL-J"], ["created_at", Mon, 27 Feb 2017 22:22:56 UTC +00:00], ["email", "vicenta.effertz@schneider.ca"], ["encrypted_password", "$2a$04$Q/f/X7P9Gfov2fXb5j2g3.HHBwJqJ.s7HaMFnPXLl8TmLHgn8tYsm"], ["updated_at", Mon, 27 Feb 2017 22:22:56 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by Api::V1::SessionsController#create as application/vnd.marketplace.v1
+  Parameters: {"session"=>{"email"=>"vicenta.effertz@schneider.ca", "password"=>"[FILTERED]"}}
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."email" = 'vicenta.effertz@schneider.ca' LIMIT 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."auth_token" IS NULL LIMIT 1[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.09ms)
+Completed 422 Unprocessable Entity in 3ms (Views: 0.6ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.5ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."auth_token" IS NULL LIMIT 1[0m
+  [1m[35mUser Exists (0.0ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'pennie_johns@stracke.com' LIMIT 1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."auth_token" = '9RwsgSN98EWgsTPzMbGU' LIMIT 1[0m
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("auth_token", "created_at", "email", "encrypted_password", "updated_at") VALUES (?, ?, ?, ?, ?)  [["auth_token", "9RwsgSN98EWgsTPzMbGU"], ["created_at", Mon, 27 Feb 2017 22:22:56 UTC +00:00], ["email", "pennie_johns@stracke.com"], ["encrypted_password", "$2a$04$tqerkyOyJRVFfk7SgAWmC.SmGozB5XI/g/ZDDNEpt5v4Oly0usL9i"], ["updated_at", Mon, 27 Feb 2017 22:22:56 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by Api::V1::SessionsController#create as application/vnd.marketplace.v1
+  Parameters: {"session"=>{"email"=>"pennie_johns@stracke.com", "password"=>"[FILTERED]"}}
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."email" = 'pennie_johns@stracke.com' LIMIT 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."auth_token" IS NULL LIMIT 1[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.06ms)
+Completed 422 Unprocessable Entity in 2ms (Views: 0.5ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.5ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."auth_token" IS NULL LIMIT 1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'herbert.willms@block.name' LIMIT 1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."auth_token" = 'Y8ZPBTpWpHfoiZcMzz_o' LIMIT 1[0m
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("auth_token", "created_at", "email", "encrypted_password", "updated_at") VALUES (?, ?, ?, ?, ?)  [["auth_token", "Y8ZPBTpWpHfoiZcMzz_o"], ["created_at", Mon, 27 Feb 2017 22:22:56 UTC +00:00], ["email", "herbert.willms@block.name"], ["encrypted_password", "$2a$04$QQjtTsyVdzbWvEr4cn2l5e3ZVxDvtqEtcQCd7IGehrDEIWTnA4Kfm"], ["updated_at", Mon, 27 Feb 2017 22:22:56 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by Api::V1::SessionsController#destroy as application/vnd.marketplace.v1
+  Parameters: {"id"=>"Y8ZPBTpWpHfoiZcMzz_o", "session"=>{}}
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."auth_token" = 'Y8ZPBTpWpHfoiZcMzz_o' LIMIT 1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."auth_token" = '7PJ96msMToNffAS2e_pE' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.0ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE ("users"."auth_token" = '7PJ96msMToNffAS2e_pE' AND "users"."id" != 1) LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "users" SET "auth_token" = ?, "updated_at" = ? WHERE "users"."id" = 1  [["auth_token", "7PJ96msMToNffAS2e_pE"], ["updated_at", Mon, 27 Feb 2017 22:22:56 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Completed 204 No Content in 3ms (ActiveRecord: 0.6ms)
+  [1m[35m (0.6ms)[0m  rollback transaction
