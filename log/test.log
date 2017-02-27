@@ -2452,3 +2452,32 @@ Binary data inserted for `string` type on column `encrypted_password`
   [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
   [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."auth_token" = 'mdcvQ1Pwu7LC7ch6yzmN' LIMIT 1[0m
   [1m[35m (0.4ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."auth_token" IS NULL LIMIT 1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'clorinda@runolfsdottir.us' LIMIT 1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."auth_token" = 'mz2qVikx3Go9kj4j5TnS' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (2.7ms)[0m  [1mINSERT INTO "users" ("auth_token", "created_at", "email", "encrypted_password", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["auth_token", "mz2qVikx3Go9kj4j5TnS"], ["created_at", Mon, 27 Feb 2017 22:08:27 UTC +00:00], ["email", "clorinda@runolfsdottir.us"], ["encrypted_password", "$2a$04$LzSTTU2eAx/FD3EUctLRbeV4fW9AGmSvGz34jW9zrEuMGBVtUGG9m"], ["updated_at", Mon, 27 Feb 2017 22:08:27 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."auth_token" = 'mz2qVikx3Go9kj4j5TnS' LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."auth_token" IS NULL LIMIT 1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'lulu@lueilwitz.com' LIMIT 1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."auth_token" = 'SwsT94RsVJ-UTLVdznGs' LIMIT 1[0m
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("auth_token", "created_at", "email", "encrypted_password", "updated_at") VALUES (?, ?, ?, ?, ?)  [["auth_token", "SwsT94RsVJ-UTLVdznGs"], ["created_at", Mon, 27 Feb 2017 22:08:27 UTC +00:00], ["email", "lulu@lueilwitz.com"], ["encrypted_password", "$2a$04$eglymdBANW6tVVfK982X6.TlywQv05ZiKZkNC4J2fHR7Vh7TaTbOO"], ["updated_at", Mon, 27 Feb 2017 22:08:27 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."auth_token" IS NULL LIMIT 1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'ivana@runolfsson.ca' LIMIT 1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."auth_token" = '7yds94cxzEaqyCo7xbWD' LIMIT 1[0m
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "users" ("auth_token", "created_at", "email", "encrypted_password", "updated_at") VALUES (?, ?, ?, ?, ?)  [["auth_token", "7yds94cxzEaqyCo7xbWD"], ["created_at", Mon, 27 Feb 2017 22:08:27 UTC +00:00], ["email", "ivana@runolfsson.ca"], ["encrypted_password", "$2a$04$KyTjFSLhoTWYMKmknZ4A2.xI2y7B0WQPLwcJuExlPrTEyyxb8OxP2"], ["updated_at", Mon, 27 Feb 2017 22:08:27 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  rollback transaction
