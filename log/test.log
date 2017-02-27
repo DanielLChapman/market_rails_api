@@ -2431,3 +2431,24 @@ Processing by Api::V1::SessionsController#destroy as application/vnd.marketplace
   [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
 Completed 204 No Content in 3ms (ActiveRecord: 0.7ms)
   [1m[35m (0.7ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.7ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."auth_token" IS NULL LIMIT 1
+  [1m[36mUser Exists (0.4ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'lezlie.gaylord@hodkiewiczkerluke.info' LIMIT 1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."auth_token" = 'ymZkK6BzoUTMVRG_Bq_s' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (2.6ms)[0m  [1mINSERT INTO "users" ("auth_token", "created_at", "email", "encrypted_password", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["auth_token", "ymZkK6BzoUTMVRG_Bq_s"], ["created_at", Mon, 27 Feb 2017 21:27:38 UTC +00:00], ["email", "lezlie.gaylord@hodkiewiczkerluke.info"], ["encrypted_password", "$2a$04$gc1MGhCwBO1H3Z/nl149ou/hGrSzrekH9wLMothwooFvrqD5h9yC."], ["updated_at", Mon, 27 Feb 2017 21:27:38 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.4ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.4ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."auth_token" IS NULL LIMIT 1
+  [1m[36mUser Exists (0.4ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'marquerite@towne.info' LIMIT 1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."auth_token" = 'mdcvQ1Pwu7LC7ch6yzmN' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (2.6ms)[0m  [1mINSERT INTO "users" ("auth_token", "created_at", "email", "encrypted_password", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["auth_token", "mdcvQ1Pwu7LC7ch6yzmN"], ["created_at", Mon, 27 Feb 2017 21:28:27 UTC +00:00], ["email", "marquerite@towne.info"], ["encrypted_password", "$2a$04$3OXedDpgjwiuDdtpf7chu.XcSSyhtN89ZcP/hKPq1OVD8d1JQFlTG"], ["updated_at", Mon, 27 Feb 2017 21:28:27 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."auth_token" = 'mdcvQ1Pwu7LC7ch6yzmN' LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  rollback transaction
