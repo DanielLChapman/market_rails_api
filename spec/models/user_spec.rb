@@ -34,4 +34,24 @@ RSpec.describe User, type: :model do
 	end
 	
 	it { should validate_uniqueness_of(:auth_token) }
+	
+	it { should have_many(:products) }
+	
+	describe "#products association" do
+		
+		before do
+			@user2 = FactoryGirl.create :user
+			3.times { FactoryGirl.create :product, user: @user2 }
+		end
+		
+		it "should destroy the associated products on self destruct" do
+			products = @user2.products
+			@user2.destroy
+			products.each do |product|
+				Product.find(product).should raise_error ActiveRecord::RecordNotFound
+			end
+		end
+		
+	end
+	
 end
