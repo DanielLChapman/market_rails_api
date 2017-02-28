@@ -106,4 +106,9 @@ describe Api::V1::UsersController, :type => :controller do
 		end
 
 	end
+	
+	it "has the product ids as an embeded object" do
+		user_response = json_response[:user]
+		user_response[:product].should eql []
+	end
 end
