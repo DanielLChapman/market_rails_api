@@ -12,4 +12,12 @@ RSpec.describe Placement, type: :model do
 	
 	it { should respond_to :product_id }
 	it { should respond_to :quantity }
+	
+	describe "#decrement_product_quantity" do
+		it "decreases the product quantity by the placement quantity" do
+			product = placement.product
+			placement.decrement_product_quantity!
+			product.quantity.should eql(product.quantity-placement.quantity)
+		end
+	end
 end
