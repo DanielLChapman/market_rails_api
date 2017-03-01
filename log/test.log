@@ -26409,3 +26409,280 @@ No serializer found for resource: #<Order id: 1, user_id: 1, total: #<BigDecimal
 [active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Order::ActiveRecord_Associations_CollectionProxy (0.68ms)
 Completed 200 OK in 3ms (Views: 1.6ms | ActiveRecord: 0.2ms)
   [1m[36m (0.6ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.3ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."auth_token" IS NULL LIMIT 1
+  [1m[36mUser Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'evelina.tremblay@rennermurazik.us' LIMIT 1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."auth_token" = 'CHNkx9ezvbP8BRyxzVx6' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "users" ("auth_token", "created_at", "email", "encrypted_password", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["auth_token", "CHNkx9ezvbP8BRyxzVx6"], ["created_at", "2017-03-01 16:49:03.202950"], ["email", "evelina.tremblay@rennermurazik.us"], ["encrypted_password", "$2a$04$7HGacW.wyveR3eR1wJ7pw.ZZaSPycnKCSiIcV5OyDb0QzIU25Oz0y"], ["updated_at", "2017-03-01 16:49:03.202950"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "orders" ("created_at", "total", "updated_at", "user_id") VALUES (?, ?, ?, ?)  [["created_at", "2017-03-01 16:49:03.252727"], ["total", 9.99], ["updated_at", "2017-03-01 16:49:03.252727"], ["user_id", 1]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "orders" ("created_at", "total", "updated_at", "user_id") VALUES (?, ?, ?, ?)[0m  [["created_at", "2017-03-01 16:49:03.255691"], ["total", 9.99], ["updated_at", "2017-03-01 16:49:03.255691"], ["user_id", 1]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "orders" ("created_at", "total", "updated_at", "user_id") VALUES (?, ?, ?, ?)  [["created_at", "2017-03-01 16:49:03.257591"], ["total", 9.99], ["updated_at", "2017-03-01 16:49:03.257591"], ["user_id", 1]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "orders" ("created_at", "total", "updated_at", "user_id") VALUES (?, ?, ?, ?)[0m  [["created_at", "2017-03-01 16:49:03.259360"], ["total", 9.99], ["updated_at", "2017-03-01 16:49:03.259360"], ["user_id", 1]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by Api::V1::OrdersController#index as application/vnd.marketplace.v1
+  Parameters: {"user_id"=>"1", "order"=>{}}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."auth_token" = 'CHNkx9ezvbP8BRyxzVx6' LIMIT 1[0m
+  [1m[35mOrder Load (0.1ms)[0m  SELECT "orders".* FROM "orders"  WHERE "orders"."user_id" = ?  [["user_id", 1]]
+No serializer found for resource: #<Order id: 1, user_id: 1, total: #<BigDecimal:7fd0b9e4d220,'0.999E1',18(36)>, created_at: "2017-03-01 16:49:03", updated_at: "2017-03-01 16:49:03">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Order::ActiveRecord_Associations_CollectionProxy (0.65ms)
+Completed 200 OK in 41ms (Views: 13.0ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.7ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."auth_token" IS NULL LIMIT 1
+  [1m[36mUser Exists (0.0ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'clair@pollich.info' LIMIT 1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."auth_token" = 'sKnAt92-auy584iPW1iz' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("auth_token", "created_at", "email", "encrypted_password", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["auth_token", "sKnAt92-auy584iPW1iz"], ["created_at", "2017-03-01 16:49:03.312593"], ["email", "clair@pollich.info"], ["encrypted_password", "$2a$04$wRu8smCNc3QtXoX3yjy9p.I/67EgvoCN.v9CBgQrjKSQNrzCV79q."], ["updated_at", "2017-03-01 16:49:03.312593"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "orders" ("created_at", "total", "updated_at", "user_id") VALUES (?, ?, ?, ?)  [["created_at", "2017-03-01 16:49:03.314615"], ["total", 9.99], ["updated_at", "2017-03-01 16:49:03.314615"], ["user_id", 1]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "orders" ("created_at", "total", "updated_at", "user_id") VALUES (?, ?, ?, ?)[0m  [["created_at", "2017-03-01 16:49:03.315796"], ["total", 9.99], ["updated_at", "2017-03-01 16:49:03.315796"], ["user_id", 1]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "orders" ("created_at", "total", "updated_at", "user_id") VALUES (?, ?, ?, ?)  [["created_at", "2017-03-01 16:49:03.316736"], ["total", 9.99], ["updated_at", "2017-03-01 16:49:03.316736"], ["user_id", 1]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "orders" ("created_at", "total", "updated_at", "user_id") VALUES (?, ?, ?, ?)[0m  [["created_at", "2017-03-01 16:49:03.317689"], ["total", 9.99], ["updated_at", "2017-03-01 16:49:03.317689"], ["user_id", 1]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by Api::V1::OrdersController#index as application/vnd.marketplace.v1
+  Parameters: {"user_id"=>"1", "order"=>{}}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."auth_token" = 'sKnAt92-auy584iPW1iz' LIMIT 1[0m
+  [1m[35mOrder Load (0.1ms)[0m  SELECT "orders".* FROM "orders"  WHERE "orders"."user_id" = ?  [["user_id", 1]]
+No serializer found for resource: #<Order id: 1, user_id: 1, total: #<BigDecimal:7fd0b9d977b8,'0.999E1',18(36)>, created_at: "2017-03-01 16:49:03", updated_at: "2017-03-01 16:49:03">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Order::ActiveRecord_Associations_CollectionProxy (0.61ms)
+Completed 200 OK in 3ms (Views: 1.7ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.9ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."auth_token" IS NULL LIMIT 1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'nathan.block@armstrong.co.uk' LIMIT 1[0m
+  [1m[35mUser Exists (0.0ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."auth_token" = 'k1w2AKjz6DYNDMRu3zsX' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("auth_token", "created_at", "email", "encrypted_password", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["auth_token", "k1w2AKjz6DYNDMRu3zsX"], ["created_at", "2017-03-01 16:49:03.327592"], ["email", "nathan.block@armstrong.co.uk"], ["encrypted_password", "$2a$04$oebGofN105KaB9/W7dO46O/OCCfGFCaJkA3KBu2HSlKe5j/JLL0re"], ["updated_at", "2017-03-01 16:49:03.327592"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "orders" ("created_at", "total", "updated_at", "user_id") VALUES (?, ?, ?, ?)  [["created_at", "2017-03-01 16:49:03.329418"], ["total", 9.99], ["updated_at", "2017-03-01 16:49:03.329418"], ["user_id", 1]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by Api::V1::OrdersController#show as application/vnd.marketplace.v1
+  Parameters: {"user_id"=>"1", "id"=>"1", "order"=>{}}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."auth_token" = 'k1w2AKjz6DYNDMRu3zsX' LIMIT 1
+  [1m[36mOrder Load (0.1ms)[0m  [1mSELECT  "orders".* FROM "orders"  WHERE "orders"."user_id" = ? AND "orders"."id" = ? LIMIT 1[0m  [["user_id", 1], ["id", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Order (0.32ms)
+Completed 200 OK in 13ms (Views: 4.2ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.5ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."auth_token" IS NULL LIMIT 1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = 'norene@stark.co.uk' LIMIT 1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."auth_token" = 'copcJ7P5sE-eyKt9JDNk' LIMIT 1[0m
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("auth_token", "created_at", "email", "encrypted_password", "updated_at") VALUES (?, ?, ?, ?, ?)  [["auth_token", "copcJ7P5sE-eyKt9JDNk"], ["created_at", "2017-03-01 16:49:03.355311"], ["email", "norene@stark.co.uk"], ["encrypted_password", "$2a$04$Sxuc1xu20K4bIxOdUwrQHelzQIGBctVmuNtHevqb9gCHjovF59vUa"], ["updated_at", "2017-03-01 16:49:03.355311"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "orders" ("created_at", "total", "updated_at", "user_id") VALUES (?, ?, ?, ?)[0m  [["created_at", "2017-03-01 16:49:03.357675"], ["total", 9.99], ["updated_at", "2017-03-01 16:49:03.357675"], ["user_id", 1]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by Api::V1::OrdersController#show as application/vnd.marketplace.v1
+  Parameters: {"user_id"=>"1", "id"=>"1", "order"=>{}}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."auth_token" = 'copcJ7P5sE-eyKt9JDNk' LIMIT 1[0m
+  [1m[35mOrder Load (0.0ms)[0m  SELECT  "orders".* FROM "orders"  WHERE "orders"."user_id" = ? AND "orders"."id" = ? LIMIT 1  [["user_id", 1], ["id", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Order (0.37ms)
+Completed 200 OK in 3ms (Views: 1.0ms | ActiveRecord: 0.1ms)
+  [1m[36m (0.7ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."auth_token" IS NULL LIMIT 1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'love_howe@kirlin.biz' LIMIT 1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."auth_token" = 'KhPGz7HMfovfo1_BE_qw' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "users" ("auth_token", "created_at", "email", "encrypted_password", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["auth_token", "KhPGz7HMfovfo1_BE_qw"], ["created_at", "2017-03-01 16:49:22.727487"], ["email", "love_howe@kirlin.biz"], ["encrypted_password", "$2a$04$wqmjYvF.Odj1PchLGnf2ce6DYSmbtN4ZExsMpoWicY8LghdNifVfi"], ["updated_at", "2017-03-01 16:49:22.727487"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "orders" ("created_at", "total", "updated_at", "user_id") VALUES (?, ?, ?, ?)  [["created_at", "2017-03-01 16:49:22.752721"], ["total", 9.99], ["updated_at", "2017-03-01 16:49:22.752721"], ["user_id", 1]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by Api::V1::OrdersController#show as application/vnd.marketplace.v1
+  Parameters: {"user_id"=>"1", "id"=>"1", "order"=>{}}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."auth_token" = 'KhPGz7HMfovfo1_BE_qw' LIMIT 1
+  [1m[36mOrder Load (0.1ms)[0m  [1mSELECT  "orders".* FROM "orders"  WHERE "orders"."user_id" = ? AND "orders"."id" = ? LIMIT 1[0m  [["user_id", 1], ["id", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Order (0.54ms)
+Completed 200 OK in 33ms (Views: 8.5ms | ActiveRecord: 0.2ms)
+  [1m[35m (1.8ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."auth_token" IS NULL LIMIT 1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = 'martin_parisian@beatty.info' LIMIT 1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."auth_token" = 'NJbXryxd6r2xsx-QbXDN' LIMIT 1[0m
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("auth_token", "created_at", "email", "encrypted_password", "updated_at") VALUES (?, ?, ?, ?, ?)  [["auth_token", "NJbXryxd6r2xsx-QbXDN"], ["created_at", "2017-03-01 16:49:22.800128"], ["email", "martin_parisian@beatty.info"], ["encrypted_password", "$2a$04$dvsCXzcKUdz3zllcVcrjhOkygOHmvPZ3Oj3Yq3T/IpPnbHX1fQ7ce"], ["updated_at", "2017-03-01 16:49:22.800128"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "orders" ("created_at", "total", "updated_at", "user_id") VALUES (?, ?, ?, ?)[0m  [["created_at", "2017-03-01 16:49:22.802562"], ["total", 9.99], ["updated_at", "2017-03-01 16:49:22.802562"], ["user_id", 1]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by Api::V1::OrdersController#show as application/vnd.marketplace.v1
+  Parameters: {"user_id"=>"1", "id"=>"1", "order"=>{}}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."auth_token" = 'NJbXryxd6r2xsx-QbXDN' LIMIT 1[0m
+  [1m[35mOrder Load (0.0ms)[0m  SELECT  "orders".* FROM "orders"  WHERE "orders"."user_id" = ? AND "orders"."id" = ? LIMIT 1  [["user_id", 1], ["id", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Order (0.36ms)
+Completed 200 OK in 3ms (Views: 0.7ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.7ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."auth_token" IS NULL LIMIT 1
+  [1m[36mUser Exists (0.0ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'paris.rowe@bogan.ca' LIMIT 1[0m
+  [1m[35mUser Exists (0.0ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."auth_token" = 'upV27zpssVZMZuf4dpjr' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("auth_token", "created_at", "email", "encrypted_password", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["auth_token", "upV27zpssVZMZuf4dpjr"], ["created_at", "2017-03-01 16:49:22.814590"], ["email", "paris.rowe@bogan.ca"], ["encrypted_password", "$2a$04$18zknxRxLdTvVRUUPLKsOe9yf8t5G6iNFhTkmUjtNMAizcyILkk7a"], ["updated_at", "2017-03-01 16:49:22.814590"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "orders" ("created_at", "total", "updated_at", "user_id") VALUES (?, ?, ?, ?)  [["created_at", "2017-03-01 16:49:22.816353"], ["total", 9.99], ["updated_at", "2017-03-01 16:49:22.816353"], ["user_id", 1]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "orders" ("created_at", "total", "updated_at", "user_id") VALUES (?, ?, ?, ?)[0m  [["created_at", "2017-03-01 16:49:22.817474"], ["total", 9.99], ["updated_at", "2017-03-01 16:49:22.817474"], ["user_id", 1]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "orders" ("created_at", "total", "updated_at", "user_id") VALUES (?, ?, ?, ?)  [["created_at", "2017-03-01 16:49:22.818447"], ["total", 9.99], ["updated_at", "2017-03-01 16:49:22.818447"], ["user_id", 1]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "orders" ("created_at", "total", "updated_at", "user_id") VALUES (?, ?, ?, ?)[0m  [["created_at", "2017-03-01 16:49:22.819402"], ["total", 9.99], ["updated_at", "2017-03-01 16:49:22.819402"], ["user_id", 1]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by Api::V1::OrdersController#index as application/vnd.marketplace.v1
+  Parameters: {"user_id"=>"1", "order"=>{}}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."auth_token" = 'upV27zpssVZMZuf4dpjr' LIMIT 1[0m
+  [1m[35mOrder Load (0.1ms)[0m  SELECT "orders".* FROM "orders"  WHERE "orders"."user_id" = ?  [["user_id", 1]]
+No serializer found for resource: #<Order id: 1, user_id: 1, total: #<BigDecimal:7fa47b2a7d68,'0.999E1',18(36)>, created_at: "2017-03-01 16:49:22", updated_at: "2017-03-01 16:49:22">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Order::ActiveRecord_Associations_CollectionProxy (0.59ms)
+Completed 200 OK in 13ms (Views: 4.8ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.6ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."auth_token" IS NULL LIMIT 1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'patience_rippin@jast.com' LIMIT 1[0m
+  [1m[35mUser Exists (0.0ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."auth_token" = 'pdPrKb_znQ_TaPqdpYCz' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("auth_token", "created_at", "email", "encrypted_password", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["auth_token", "pdPrKb_znQ_TaPqdpYCz"], ["created_at", "2017-03-01 16:49:22.839403"], ["email", "patience_rippin@jast.com"], ["encrypted_password", "$2a$04$TFH9XAicT/tLy82sttKUzeTIne5QgBqv7zhxC01CPBwckUBf6hiLK"], ["updated_at", "2017-03-01 16:49:22.839403"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "orders" ("created_at", "total", "updated_at", "user_id") VALUES (?, ?, ?, ?)  [["created_at", "2017-03-01 16:49:22.841410"], ["total", 9.99], ["updated_at", "2017-03-01 16:49:22.841410"], ["user_id", 1]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "orders" ("created_at", "total", "updated_at", "user_id") VALUES (?, ?, ?, ?)[0m  [["created_at", "2017-03-01 16:49:22.842812"], ["total", 9.99], ["updated_at", "2017-03-01 16:49:22.842812"], ["user_id", 1]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "orders" ("created_at", "total", "updated_at", "user_id") VALUES (?, ?, ?, ?)  [["created_at", "2017-03-01 16:49:22.843813"], ["total", 9.99], ["updated_at", "2017-03-01 16:49:22.843813"], ["user_id", 1]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "orders" ("created_at", "total", "updated_at", "user_id") VALUES (?, ?, ?, ?)[0m  [["created_at", "2017-03-01 16:49:22.844741"], ["total", 9.99], ["updated_at", "2017-03-01 16:49:22.844741"], ["user_id", 1]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by Api::V1::OrdersController#index as application/vnd.marketplace.v1
+  Parameters: {"user_id"=>"1", "order"=>{}}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."auth_token" = 'pdPrKb_znQ_TaPqdpYCz' LIMIT 1[0m
+  [1m[35mOrder Load (0.1ms)[0m  SELECT "orders".* FROM "orders"  WHERE "orders"."user_id" = ?  [["user_id", 1]]
+No serializer found for resource: #<Order id: 1, user_id: 1, total: #<BigDecimal:7fa47a3a9c80,'0.999E1',18(36)>, created_at: "2017-03-01 16:49:22", updated_at: "2017-03-01 16:49:22">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Order::ActiveRecord_Associations_CollectionProxy (0.54ms)
+Completed 200 OK in 3ms (Views: 1.5ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.6ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."auth_token" IS NULL LIMIT 1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'dinah_marvin@runolfsdottir.us' LIMIT 1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."auth_token" = 'bvUhU4phQLyd1sY4drxv' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("auth_token", "created_at", "email", "encrypted_password", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["auth_token", "bvUhU4phQLyd1sY4drxv"], ["created_at", "2017-03-01 16:49:38.705337"], ["email", "dinah_marvin@runolfsdottir.us"], ["encrypted_password", "$2a$04$GwFIk8FT9NVwGUV1Nm2LCedCDVGgWvUAuKpmyuKFblK2jc.dJYMTq"], ["updated_at", "2017-03-01 16:49:38.705337"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "orders" ("created_at", "total", "updated_at", "user_id") VALUES (?, ?, ?, ?)  [["created_at", "2017-03-01 16:49:38.727622"], ["total", 9.99], ["updated_at", "2017-03-01 16:49:38.727622"], ["user_id", 1]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by Api::V1::OrdersController#show as application/vnd.marketplace.v1
+  Parameters: {"user_id"=>"1", "id"=>"1", "order"=>{}}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."auth_token" = 'bvUhU4phQLyd1sY4drxv' LIMIT 1
+  [1m[36mOrder Load (0.1ms)[0m  [1mSELECT  "orders".* FROM "orders"  WHERE "orders"."user_id" = ? AND "orders"."id" = ? LIMIT 1[0m  [["user_id", 1], ["id", 1]]
+[active_model_serializers] Rendered OrderSerializer with ActiveModelSerializers::Adapter::Attributes (0.22ms)
+Completed 200 OK in 47ms (Views: 20.2ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.6ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."auth_token" IS NULL LIMIT 1[0m
+  [1m[35mUser Exists (0.0ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = 'angel@mckenzie.name' LIMIT 1
+  [1m[36mUser Exists (0.0ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."auth_token" = 'ZwFR-5uRaxe7sjxJmWRr' LIMIT 1[0m
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("auth_token", "created_at", "email", "encrypted_password", "updated_at") VALUES (?, ?, ?, ?, ?)  [["auth_token", "ZwFR-5uRaxe7sjxJmWRr"], ["created_at", "2017-03-01 16:49:38.786896"], ["email", "angel@mckenzie.name"], ["encrypted_password", "$2a$04$qstMmfupVLsthOIh/DkSHe3NzpiaXYuT4nPgtFZydpE7Iv0FU2b1i"], ["updated_at", "2017-03-01 16:49:38.786896"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "orders" ("created_at", "total", "updated_at", "user_id") VALUES (?, ?, ?, ?)[0m  [["created_at", "2017-03-01 16:49:38.788760"], ["total", 9.99], ["updated_at", "2017-03-01 16:49:38.788760"], ["user_id", 1]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by Api::V1::OrdersController#show as application/vnd.marketplace.v1
+  Parameters: {"user_id"=>"1", "id"=>"1", "order"=>{}}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."auth_token" = 'ZwFR-5uRaxe7sjxJmWRr' LIMIT 1[0m
+  [1m[35mOrder Load (0.0ms)[0m  SELECT  "orders".* FROM "orders"  WHERE "orders"."user_id" = ? AND "orders"."id" = ? LIMIT 1  [["user_id", 1], ["id", 1]]
+[active_model_serializers] Rendered OrderSerializer with ActiveModelSerializers::Adapter::Attributes (0.13ms)
+Completed 200 OK in 2ms (Views: 0.6ms | ActiveRecord: 0.1ms)
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."auth_token" IS NULL LIMIT 1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'bonita_reinger@wiza.info' LIMIT 1[0m
+  [1m[35mUser Exists (0.0ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."auth_token" = '48w5na-EKjjZKGnuDyZN' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("auth_token", "created_at", "email", "encrypted_password", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["auth_token", "48w5na-EKjjZKGnuDyZN"], ["created_at", "2017-03-01 16:49:38.797427"], ["email", "bonita_reinger@wiza.info"], ["encrypted_password", "$2a$04$6F2I1ELHpZ1B8UlZ5BwiAuojhgrbTtkDypuFysDheQgbXq7js4llS"], ["updated_at", "2017-03-01 16:49:38.797427"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "orders" ("created_at", "total", "updated_at", "user_id") VALUES (?, ?, ?, ?)  [["created_at", "2017-03-01 16:49:38.799346"], ["total", 9.99], ["updated_at", "2017-03-01 16:49:38.799346"], ["user_id", 1]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "orders" ("created_at", "total", "updated_at", "user_id") VALUES (?, ?, ?, ?)[0m  [["created_at", "2017-03-01 16:49:38.801339"], ["total", 9.99], ["updated_at", "2017-03-01 16:49:38.801339"], ["user_id", 1]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "orders" ("created_at", "total", "updated_at", "user_id") VALUES (?, ?, ?, ?)  [["created_at", "2017-03-01 16:49:38.802855"], ["total", 9.99], ["updated_at", "2017-03-01 16:49:38.802855"], ["user_id", 1]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "orders" ("created_at", "total", "updated_at", "user_id") VALUES (?, ?, ?, ?)[0m  [["created_at", "2017-03-01 16:49:38.803822"], ["total", 9.99], ["updated_at", "2017-03-01 16:49:38.803822"], ["user_id", 1]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by Api::V1::OrdersController#index as application/vnd.marketplace.v1
+  Parameters: {"user_id"=>"1", "order"=>{}}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."auth_token" = '48w5na-EKjjZKGnuDyZN' LIMIT 1[0m
+  [1m[35mOrder Load (0.1ms)[0m  SELECT "orders".* FROM "orders"  WHERE "orders"."user_id" = ?  [["user_id", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.27ms)
+Completed 200 OK in 10ms (Views: 1.3ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.6ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."auth_token" IS NULL LIMIT 1
+  [1m[36mUser Exists (0.0ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'chuck_reinger@maggio.info' LIMIT 1[0m
+  [1m[35mUser Exists (0.0ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."auth_token" = 'R9yvAeBhq7LqGzJjfy1R' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("auth_token", "created_at", "email", "encrypted_password", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["auth_token", "R9yvAeBhq7LqGzJjfy1R"], ["created_at", "2017-03-01 16:49:38.819886"], ["email", "chuck_reinger@maggio.info"], ["encrypted_password", "$2a$04$XRa5EKrRiy8Ou7Iqm7vH4.BJY.fqFUe/4HL11BokexHTKzrgZGREW"], ["updated_at", "2017-03-01 16:49:38.819886"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "orders" ("created_at", "total", "updated_at", "user_id") VALUES (?, ?, ?, ?)  [["created_at", "2017-03-01 16:49:38.821819"], ["total", 9.99], ["updated_at", "2017-03-01 16:49:38.821819"], ["user_id", 1]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "orders" ("created_at", "total", "updated_at", "user_id") VALUES (?, ?, ?, ?)[0m  [["created_at", "2017-03-01 16:49:38.823110"], ["total", 9.99], ["updated_at", "2017-03-01 16:49:38.823110"], ["user_id", 1]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "orders" ("created_at", "total", "updated_at", "user_id") VALUES (?, ?, ?, ?)  [["created_at", "2017-03-01 16:49:38.824248"], ["total", 9.99], ["updated_at", "2017-03-01 16:49:38.824248"], ["user_id", 1]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "orders" ("created_at", "total", "updated_at", "user_id") VALUES (?, ?, ?, ?)[0m  [["created_at", "2017-03-01 16:49:38.825261"], ["total", 9.99], ["updated_at", "2017-03-01 16:49:38.825261"], ["user_id", 1]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by Api::V1::OrdersController#index as application/vnd.marketplace.v1
+  Parameters: {"user_id"=>"1", "order"=>{}}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."auth_token" = 'R9yvAeBhq7LqGzJjfy1R' LIMIT 1[0m
+  [1m[35mOrder Load (0.1ms)[0m  SELECT "orders".* FROM "orders"  WHERE "orders"."user_id" = ?  [["user_id", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.22ms)
+Completed 200 OK in 3ms (Views: 1.3ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.7ms)[0m  [1mrollback transaction[0m
