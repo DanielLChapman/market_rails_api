@@ -27,4 +27,18 @@ RSpec.describe Order, type: :model do
 			@order.set_total!.should eql(185)
 		end
 	end
+	
+	describe "#build_placements_with_product_ids_and_queantities" do
+		before(:each) do
+			product_1 = FactoryGirl.create :product, price: 100, quantity: 5
+			product_2 = FactoryGirl.create :product, price: 85, quantity: 10
+			
+			@product_ids_and_quantities = [[product_1.id, 2], [product_2.id, 3]]
+		end
+		
+		it "builds 2 placements for the order" do
+			order.build_placements_with_products_ids_and_quantities(@product_ids_and_quantities)
+			order.placements.size.should eql(2)
+		end
+	end
 end
