@@ -17,14 +17,21 @@ RSpec.describe Order, type: :model do
 	
 	describe '#set_total!' do
 		before(:each) do
-			product_1 = FactoryGirl.create :product, price: "100"
-			product_2 = FactoryGirl.create :product, price: 85
-			
-			@order = FactoryGirl.build :order, product_ids: [product_1.id, product_2.id]
+			  product_1 = FactoryGirl.create :product, price: 100
+			  product_2 = FactoryGirl.create :product, price: 85
+
+			  placement_1 = FactoryGirl.build :placement, product: product_1, quantity: 3
+			  placement_2 = FactoryGirl.build :placement, product: product_2, quantity: 15
+
+			  @order = FactoryGirl.build :order
+
+			  @order.placements << placement_1
+			  @order.placements << placement_2
 		end
 		
 		it "returns the total amount to pay for the products" do
-			@order.set_total!.should eql(185)
+			@order.set_total!
+			@order.total.should eql(1575)
 		end
 	end
 	
