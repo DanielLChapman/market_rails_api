@@ -29054,3 +29054,756 @@ Binary data inserted for `string` type on column `encrypted_password`
   [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
   [1m[36mProduct Load (0.1ms)[0m  [1mSELECT "products".* FROM "products"  WHERE "products"."id" IN (6, 7)[0m
   [1m[35m (0.7ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.3ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."auth_token" IS NULL LIMIT 1
+  [1m[36mUser Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'elane_parker@medhurstgusikowski.com' LIMIT 1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."auth_token" = 'oyxsdfFfWdLqZp5y5bJC' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "users" ("auth_token", "created_at", "email", "encrypted_password", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["auth_token", "oyxsdfFfWdLqZp5y5bJC"], ["created_at", "2017-03-01 20:30:24.672676"], ["email", "elane_parker@medhurstgusikowski.com"], ["encrypted_password", "$2a$04$vajKJ6AKdUKOo/qd//xqduntJJx/8Rq16ks9G.nOoC5BP3h5uL1XO"], ["updated_at", "2017-03-01 20:30:24.672676"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."auth_token" IS NULL LIMIT 1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'tasha_kub@reichelroberts.biz' LIMIT 1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."auth_token" = 'EgfhXW1vEj9mGE369L94' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "users" ("auth_token", "created_at", "email", "encrypted_password", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["auth_token", "EgfhXW1vEj9mGE369L94"], ["created_at", "2017-03-01 20:30:24.721711"], ["email", "tasha_kub@reichelroberts.biz"], ["encrypted_password", "$2a$04$0fR/sXmWfcWrINHFoXJIpOVPlDOiNgw/j08/.oDS.jhvmyyfetia6"], ["updated_at", "2017-03-01 20:30:24.721711"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "products" ("created_at", "price", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?)  [["created_at", "2017-03-01 20:30:24.741553"], ["price", 51.2884282931268], ["title", "Output Mount"], ["updated_at", "2017-03-01 20:30:24.741553"], ["user_id", 10]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."auth_token" IS NULL LIMIT 1[0m
+  [1m[35mUser Exists (0.0ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = 'coletta_russel@heidenreichschultz.biz' LIMIT 1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."auth_token" = 'PgSphtNy8GWWA42s_uCe' LIMIT 1[0m
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "users" ("auth_token", "created_at", "email", "encrypted_password", "updated_at") VALUES (?, ?, ?, ?, ?)  [["auth_token", "PgSphtNy8GWWA42s_uCe"], ["created_at", "2017-03-01 20:30:24.745247"], ["email", "coletta_russel@heidenreichschultz.biz"], ["encrypted_password", "$2a$04$qLum.APDhdPwM/ZDoMNTZunGv2v7/T3D/RQqvA4KoKT56cM8mG4Ja"], ["updated_at", "2017-03-01 20:30:24.745247"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "products" ("created_at", "price", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", "2017-03-01 20:30:24.746526"], ["price", 43.839943953885], ["title", "Auto Gel Bridge"], ["updated_at", "2017-03-01 20:30:24.746526"], ["user_id", 11]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by Api::V1::OrdersController#create as application/vnd.marketplace.v1
+  Parameters: {"order"=>{"product_ids"=>["6", "7"]}, "user_id"=>"9"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."auth_token" = 'oyxsdfFfWdLqZp5y5bJC' LIMIT 1[0m
+  [1m[35mProduct Load (0.2ms)[0m  SELECT "products".* FROM "products"  WHERE "products"."id" IN (6, 7)
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "orders" ("created_at", "total", "updated_at", "user_id") VALUES (?, ?, ?, ?)  [["created_at", "2017-03-01 20:30:24.791639"], ["total", 95.1283722470118], ["updated_at", "2017-03-01 20:30:24.791639"], ["user_id", 9]]
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "placements" ("created_at", "order_id", "product_id", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", "2017-03-01 20:30:24.792573"], ["order_id", 1], ["product_id", 6], ["updated_at", "2017-03-01 20:30:24.792573"]]
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "placements" ("created_at", "order_id", "product_id", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", "2017-03-01 20:30:24.793271"], ["order_id", 1], ["product_id", 7], ["updated_at", "2017-03-01 20:30:24.793271"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+[active_model_serializers] Rendered OrderSerializer with ActiveModelSerializers::Adapter::Attributes (8.6ms)
+Completed 201 Created in 68ms (Views: 32.6ms | ActiveRecord: 1.1ms)
+  [1m[35m (0.6ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."auth_token" IS NULL LIMIT 1[0m
+  [1m[35mUser Exists (0.0ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = 'laurence.heller@schamberger.name' LIMIT 1
+  [1m[36mUser Exists (0.0ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."auth_token" = 'A5CYm_eEdcyQsuCXC-uS' LIMIT 1[0m
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("auth_token", "created_at", "email", "encrypted_password", "updated_at") VALUES (?, ?, ?, ?, ?)  [["auth_token", "A5CYm_eEdcyQsuCXC-uS"], ["created_at", "2017-03-01 20:30:24.831656"], ["email", "laurence.heller@schamberger.name"], ["encrypted_password", "$2a$04$9nOmblFrCBYCh8y6y/V4NOC6WJeueT319O1lK0x2Exh./HLipG.Di"], ["updated_at", "2017-03-01 20:30:24.831656"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.0ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."auth_token" IS NULL LIMIT 1[0m
+  [1m[35mUser Exists (0.0ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = 'art.kutch@nolan.info' LIMIT 1
+  [1m[36mUser Exists (0.0ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."auth_token" = 'wQz3TzXfQNDs2toBoj7a' LIMIT 1[0m
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("auth_token", "created_at", "email", "encrypted_password", "updated_at") VALUES (?, ?, ?, ?, ?)  [["auth_token", "wQz3TzXfQNDs2toBoj7a"], ["created_at", "2017-03-01 20:30:24.835567"], ["email", "art.kutch@nolan.info"], ["encrypted_password", "$2a$04$oVy7sZ681MXu9aCS6YfWu.6eM8xK/6UxKolLUWRVNgJOFXjn11hoC"], ["updated_at", "2017-03-01 20:30:24.835567"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "products" ("created_at", "price", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", "2017-03-01 20:30:24.838217"], ["price", 54.5986539847547], ["title", "Power Component"], ["updated_at", "2017-03-01 20:30:24.838217"], ["user_id", 10]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."auth_token" IS NULL LIMIT 1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'pearlie_hand@franeckimclaughlin.ca' LIMIT 1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."auth_token" = 'PPo_2AdHTSPDj575XuhW' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "users" ("auth_token", "created_at", "email", "encrypted_password", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["auth_token", "PPo_2AdHTSPDj575XuhW"], ["created_at", "2017-03-01 20:30:24.843292"], ["email", "pearlie_hand@franeckimclaughlin.ca"], ["encrypted_password", "$2a$04$D9uT5uxbXDr9ScxV4atkZOuoE.hgB1Ku3WYlxWeg61qmQGXu32UY2"], ["updated_at", "2017-03-01 20:30:24.843292"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "products" ("created_at", "price", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?)  [["created_at", "2017-03-01 20:30:24.844990"], ["price", 98.2462026658678], ["title", "Electric Tuner"], ["updated_at", "2017-03-01 20:30:24.844990"], ["user_id", 11]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by Api::V1::OrdersController#create as application/vnd.marketplace.v1
+  Parameters: {"order"=>{"product_ids"=>["6", "7"]}, "user_id"=>"9"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."auth_token" = 'A5CYm_eEdcyQsuCXC-uS' LIMIT 1
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT "products".* FROM "products"  WHERE "products"."id" IN (6, 7)[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "orders" ("created_at", "total", "updated_at", "user_id") VALUES (?, ?, ?, ?)[0m  [["created_at", "2017-03-01 20:30:24.850138"], ["total", 152.8448566506225], ["updated_at", "2017-03-01 20:30:24.850138"], ["user_id", 9]]
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "placements" ("created_at", "order_id", "product_id", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", "2017-03-01 20:30:24.850856"], ["order_id", 1], ["product_id", 6], ["updated_at", "2017-03-01 20:30:24.850856"]]
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "placements" ("created_at", "order_id", "product_id", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", "2017-03-01 20:30:24.851441"], ["order_id", 1], ["product_id", 7], ["updated_at", "2017-03-01 20:30:24.851441"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+[active_model_serializers] Rendered OrderSerializer with ActiveModelSerializers::Adapter::Attributes (0.72ms)
+Completed 201 Created in 7ms (Views: 1.4ms | ActiveRecord: 0.5ms)
+  [1m[36m (0.6ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."auth_token" IS NULL LIMIT 1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'claretta@kiehnwolff.ca' LIMIT 1[0m
+  [1m[35mUser Exists (0.0ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."auth_token" = 'bhWKXyZKzfzKHycr7ieE' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("auth_token", "created_at", "email", "encrypted_password", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["auth_token", "bhWKXyZKzfzKHycr7ieE"], ["created_at", "2017-03-01 20:30:24.859406"], ["email", "claretta@kiehnwolff.ca"], ["encrypted_password", "$2a$04$TpQf0QJTSvjXCWJEPWz0J./B71XWiiLY/epv81/nXJJzSTJRfXLVe"], ["updated_at", "2017-03-01 20:30:24.859406"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "orders" ("created_at", "total", "updated_at", "user_id") VALUES (?, ?, ?, ?)  [["created_at", "2017-03-01 20:30:24.861739"], ["total", 0.0], ["updated_at", "2017-03-01 20:30:24.861739"], ["user_id", 9]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "orders" ("created_at", "total", "updated_at", "user_id") VALUES (?, ?, ?, ?)[0m  [["created_at", "2017-03-01 20:30:24.863591"], ["total", 0.0], ["updated_at", "2017-03-01 20:30:24.863591"], ["user_id", 9]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "orders" ("created_at", "total", "updated_at", "user_id") VALUES (?, ?, ?, ?)  [["created_at", "2017-03-01 20:30:24.865555"], ["total", 0.0], ["updated_at", "2017-03-01 20:30:24.865555"], ["user_id", 9]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "orders" ("created_at", "total", "updated_at", "user_id") VALUES (?, ?, ?, ?)[0m  [["created_at", "2017-03-01 20:30:24.867334"], ["total", 0.0], ["updated_at", "2017-03-01 20:30:24.867334"], ["user_id", 9]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by Api::V1::OrdersController#index as application/vnd.marketplace.v1
+  Parameters: {"user_id"=>"9", "order"=>{}}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."auth_token" = 'bhWKXyZKzfzKHycr7ieE' LIMIT 1[0m
+  [1m[35mOrder Load (0.1ms)[0m  SELECT "orders".* FROM "orders"  WHERE "orders"."user_id" = ?  [["user_id", 9]]
+[active_model_serializers]   [1m[36mProduct Load (0.1ms)[0m  [1mSELECT "products".* FROM "products" INNER JOIN "placements" ON "products"."id" = "placements"."product_id" WHERE "placements"."order_id" = ?[0m  [["order_id", 1]]
+[active_model_serializers]   [1m[35mProduct Load (0.0ms)[0m  SELECT "products".* FROM "products" INNER JOIN "placements" ON "products"."id" = "placements"."product_id" WHERE "placements"."order_id" = ?  [["order_id", 2]]
+[active_model_serializers]   [1m[36mProduct Load (0.0ms)[0m  [1mSELECT "products".* FROM "products" INNER JOIN "placements" ON "products"."id" = "placements"."product_id" WHERE "placements"."order_id" = ?[0m  [["order_id", 3]]
+[active_model_serializers]   [1m[35mProduct Load (0.0ms)[0m  SELECT "products".* FROM "products" INNER JOIN "placements" ON "products"."id" = "placements"."product_id" WHERE "placements"."order_id" = ?  [["order_id", 4]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (4.38ms)
+Completed 200 OK in 35ms (Views: 5.5ms | ActiveRecord: 0.4ms)
+  [1m[36m (0.6ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."auth_token" IS NULL LIMIT 1
+  [1m[36mUser Exists (0.0ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'jason@bahringerfay.com' LIMIT 1[0m
+  [1m[35mUser Exists (0.0ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."auth_token" = 'aQsAK-khGwPKB22Gtfyf' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("auth_token", "created_at", "email", "encrypted_password", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["auth_token", "aQsAK-khGwPKB22Gtfyf"], ["created_at", "2017-03-01 20:30:24.908602"], ["email", "jason@bahringerfay.com"], ["encrypted_password", "$2a$04$ey2dO19h1RA7VdNtiWQ41eZwMTl/4nQzuBCqioWEXOBBWDiWWwRKe"], ["updated_at", "2017-03-01 20:30:24.908602"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "orders" ("created_at", "total", "updated_at", "user_id") VALUES (?, ?, ?, ?)  [["created_at", "2017-03-01 20:30:24.910699"], ["total", 0.0], ["updated_at", "2017-03-01 20:30:24.910699"], ["user_id", 9]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "orders" ("created_at", "total", "updated_at", "user_id") VALUES (?, ?, ?, ?)[0m  [["created_at", "2017-03-01 20:30:24.912191"], ["total", 0.0], ["updated_at", "2017-03-01 20:30:24.912191"], ["user_id", 9]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "orders" ("created_at", "total", "updated_at", "user_id") VALUES (?, ?, ?, ?)  [["created_at", "2017-03-01 20:30:24.913562"], ["total", 0.0], ["updated_at", "2017-03-01 20:30:24.913562"], ["user_id", 9]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "orders" ("created_at", "total", "updated_at", "user_id") VALUES (?, ?, ?, ?)[0m  [["created_at", "2017-03-01 20:30:24.914934"], ["total", 0.0], ["updated_at", "2017-03-01 20:30:24.914934"], ["user_id", 9]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by Api::V1::OrdersController#index as application/vnd.marketplace.v1
+  Parameters: {"user_id"=>"9", "order"=>{}}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."auth_token" = 'aQsAK-khGwPKB22Gtfyf' LIMIT 1[0m
+  [1m[35mOrder Load (0.1ms)[0m  SELECT "orders".* FROM "orders"  WHERE "orders"."user_id" = ?  [["user_id", 9]]
+[active_model_serializers]   [1m[36mProduct Load (0.0ms)[0m  [1mSELECT "products".* FROM "products" INNER JOIN "placements" ON "products"."id" = "placements"."product_id" WHERE "placements"."order_id" = ?[0m  [["order_id", 1]]
+[active_model_serializers]   [1m[35mProduct Load (0.0ms)[0m  SELECT "products".* FROM "products" INNER JOIN "placements" ON "products"."id" = "placements"."product_id" WHERE "placements"."order_id" = ?  [["order_id", 2]]
+[active_model_serializers]   [1m[36mProduct Load (0.0ms)[0m  [1mSELECT "products".* FROM "products" INNER JOIN "placements" ON "products"."id" = "placements"."product_id" WHERE "placements"."order_id" = ?[0m  [["order_id", 3]]
+[active_model_serializers]   [1m[35mProduct Load (0.0ms)[0m  SELECT "products".* FROM "products" INNER JOIN "placements" ON "products"."id" = "placements"."product_id" WHERE "placements"."order_id" = ?  [["order_id", 4]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (4.93ms)
+Completed 200 OK in 7ms (Views: 5.8ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.8ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."auth_token" IS NULL LIMIT 1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'pearlene.vandervort@wilderman.com' LIMIT 1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."auth_token" = 'qj_-Q6Rq8WMGDB8sQPMQ' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("auth_token", "created_at", "email", "encrypted_password", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["auth_token", "qj_-Q6Rq8WMGDB8sQPMQ"], ["created_at", "2017-03-01 20:30:24.929069"], ["email", "pearlene.vandervort@wilderman.com"], ["encrypted_password", "$2a$04$9jVpg5C7gMrW2AiBd6vWb.xo7cZfyzVXOzPFZVLNEC1RCGPslIUvG"], ["updated_at", "2017-03-01 20:30:24.929069"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "orders" ("created_at", "total", "updated_at", "user_id") VALUES (?, ?, ?, ?)  [["created_at", "2017-03-01 20:30:24.931430"], ["total", 0.0], ["updated_at", "2017-03-01 20:30:24.931430"], ["user_id", 9]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by Api::V1::OrdersController#show as application/vnd.marketplace.v1
+  Parameters: {"user_id"=>"9", "id"=>"1", "order"=>{}}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."auth_token" = 'qj_-Q6Rq8WMGDB8sQPMQ' LIMIT 1
+  [1m[36mOrder Load (0.1ms)[0m  [1mSELECT  "orders".* FROM "orders"  WHERE "orders"."user_id" = ? AND "orders"."id" = ? LIMIT 1[0m  [["user_id", 9], ["id", 1]]
+[active_model_serializers]   [1m[35mProduct Load (0.0ms)[0m  SELECT "products".* FROM "products" INNER JOIN "placements" ON "products"."id" = "placements"."product_id" WHERE "placements"."order_id" = ?  [["order_id", 1]]
+[active_model_serializers] Rendered OrderSerializer with ActiveModelSerializers::Adapter::Attributes (1.23ms)
+Completed 200 OK in 12ms (Views: 1.7ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."auth_token" IS NULL LIMIT 1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'russel.wolff@quigley.co.uk' LIMIT 1[0m
+  [1m[35mUser Exists (0.0ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."auth_token" = '_zicW5m5nPYgU37E9tZG' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("auth_token", "created_at", "email", "encrypted_password", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["auth_token", "_zicW5m5nPYgU37E9tZG"], ["created_at", "2017-03-01 20:30:24.956290"], ["email", "russel.wolff@quigley.co.uk"], ["encrypted_password", "$2a$04$a6hfSyOmeITEUW7WDc4z/O2HSYeP0LYIveO6TvEsvPFU7xvnRZO2y"], ["updated_at", "2017-03-01 20:30:24.956290"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "orders" ("created_at", "total", "updated_at", "user_id") VALUES (?, ?, ?, ?)  [["created_at", "2017-03-01 20:30:24.958586"], ["total", 0.0], ["updated_at", "2017-03-01 20:30:24.958586"], ["user_id", 9]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by Api::V1::OrdersController#show as application/vnd.marketplace.v1
+  Parameters: {"user_id"=>"9", "id"=>"1", "order"=>{}}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."auth_token" = '_zicW5m5nPYgU37E9tZG' LIMIT 1
+  [1m[36mOrder Load (0.0ms)[0m  [1mSELECT  "orders".* FROM "orders"  WHERE "orders"."user_id" = ? AND "orders"."id" = ? LIMIT 1[0m  [["user_id", 9], ["id", 1]]
+[active_model_serializers]   [1m[35mProduct Load (0.0ms)[0m  SELECT "products".* FROM "products" INNER JOIN "placements" ON "products"."id" = "placements"."product_id" WHERE "placements"."order_id" = ?  [["order_id", 1]]
+[active_model_serializers] Rendered OrderSerializer with ActiveModelSerializers::Adapter::Attributes (1.19ms)
+Completed 200 OK in 3ms (Views: 1.6ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.6ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."auth_token" IS NULL LIMIT 1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'colette@rennerschultz.com' LIMIT 1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."auth_token" = 'N5XYd4Sxy8GXAhuK5KHB' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("auth_token", "created_at", "email", "encrypted_password", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["auth_token", "N5XYd4Sxy8GXAhuK5KHB"], ["created_at", "2017-03-01 20:30:25.007787"], ["email", "colette@rennerschultz.com"], ["encrypted_password", "$2a$04$O5dva8waBKzfewAJgjeTOuHsYDMrseZXeCKPexGpGIwxTllJxX/32"], ["updated_at", "2017-03-01 20:30:25.007787"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "orders" ("created_at", "total", "updated_at", "user_id") VALUES (?, ?, ?, ?)  [["created_at", "2017-03-01 20:30:25.010355"], ["total", 0.0], ["updated_at", "2017-03-01 20:30:25.010355"], ["user_id", 9]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by Api::V1::OrdersController#show as application/vnd.marketplace.v1
+  Parameters: {"user_id"=>"9", "id"=>"1", "order"=>{}}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."auth_token" = 'N5XYd4Sxy8GXAhuK5KHB' LIMIT 1
+  [1m[36mOrder Load (0.0ms)[0m  [1mSELECT  "orders".* FROM "orders"  WHERE "orders"."user_id" = ? AND "orders"."id" = ? LIMIT 1[0m  [["user_id", 9], ["id", 1]]
+[active_model_serializers]   [1m[35mProduct Load (0.0ms)[0m  SELECT "products".* FROM "products" INNER JOIN "placements" ON "products"."id" = "placements"."product_id" WHERE "placements"."order_id" = ?  [["order_id", 1]]
+[active_model_serializers] Rendered OrderSerializer with ActiveModelSerializers::Adapter::Attributes (1.04ms)
+Completed 200 OK in 3ms (Views: 1.4ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.6ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."auth_token" IS NULL LIMIT 1
+  [1m[36mUser Exists (0.0ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'madge@lindgren.co.uk' LIMIT 1[0m
+  [1m[35mUser Exists (0.0ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."auth_token" = 'rE3aiyCxxe9mmeWPV6xG' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("auth_token", "created_at", "email", "encrypted_password", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["auth_token", "rE3aiyCxxe9mmeWPV6xG"], ["created_at", "2017-03-01 20:30:25.020051"], ["email", "madge@lindgren.co.uk"], ["encrypted_password", "$2a$04$9Gs7JHFk9LKrClyxW8WG4eKtzNLFlEYSxJxv5BH4pZfx3dSbiwy.C"], ["updated_at", "2017-03-01 20:30:25.020051"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "orders" ("created_at", "total", "updated_at", "user_id") VALUES (?, ?, ?, ?)  [["created_at", "2017-03-01 20:30:25.022381"], ["total", 0.0], ["updated_at", "2017-03-01 20:30:25.022381"], ["user_id", 9]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by Api::V1::OrdersController#show as application/vnd.marketplace.v1
+  Parameters: {"user_id"=>"9", "id"=>"1", "order"=>{}}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."auth_token" = 'rE3aiyCxxe9mmeWPV6xG' LIMIT 1
+  [1m[36mOrder Load (0.0ms)[0m  [1mSELECT  "orders".* FROM "orders"  WHERE "orders"."user_id" = ? AND "orders"."id" = ? LIMIT 1[0m  [["user_id", 9], ["id", 1]]
+[active_model_serializers]   [1m[35mProduct Load (0.0ms)[0m  SELECT "products".* FROM "products" INNER JOIN "placements" ON "products"."id" = "placements"."product_id" WHERE "placements"."order_id" = ?  [["order_id", 1]]
+[active_model_serializers] Rendered OrderSerializer with ActiveModelSerializers::Adapter::Attributes (1.01ms)
+Completed 200 OK in 3ms (Views: 1.4ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.7ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.4ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."auth_token" IS NULL LIMIT 1
+  [1m[36mUser Exists (0.5ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'jacque@buckridge.co.uk' LIMIT 1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."auth_token" = 'vXYNMapw6USBF2S17-Ba' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "users" ("auth_token", "created_at", "email", "encrypted_password", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["auth_token", "vXYNMapw6USBF2S17-Ba"], ["created_at", "2017-03-01 20:31:09.171682"], ["email", "jacque@buckridge.co.uk"], ["encrypted_password", "$2a$04$RbS0D3WEDsQJhfWb5ksH4OUwOCV1PHCfUVVJLgWcdaIr8BJvWsBty"], ["updated_at", "2017-03-01 20:31:09.171682"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."auth_token" IS NULL LIMIT 1
+  [1m[36mUser Exists (0.0ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'sarai@marvingreenholt.us' LIMIT 1[0m
+  [1m[35mUser Exists (0.0ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."auth_token" = '8RdqJwdKqiACUvdXKuQs' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "users" ("auth_token", "created_at", "email", "encrypted_password", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["auth_token", "8RdqJwdKqiACUvdXKuQs"], ["created_at", "2017-03-01 20:31:09.209886"], ["email", "sarai@marvingreenholt.us"], ["encrypted_password", "$2a$04$JXbs6iMmOQHhw7u99GZYgejnXkuX1MYtHu6wIiGZUjU/MlfTvJZLu"], ["updated_at", "2017-03-01 20:31:09.209886"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "products" ("created_at", "price", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?)  [["created_at", "2017-03-01 20:31:09.218363"], ["price", 1.37644297215243], ["title", "Audible Portable Case"], ["updated_at", "2017-03-01 20:31:09.218363"], ["user_id", 10]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."auth_token" IS NULL LIMIT 1[0m
+  [1m[35mUser Exists (0.0ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = 'dian@kutchdickens.com' LIMIT 1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."auth_token" = 'XikzgNiLnUzNQoiKde6L' LIMIT 1[0m
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "users" ("auth_token", "created_at", "email", "encrypted_password", "updated_at") VALUES (?, ?, ?, ?, ?)  [["auth_token", "XikzgNiLnUzNQoiKde6L"], ["created_at", "2017-03-01 20:31:09.222669"], ["email", "dian@kutchdickens.com"], ["encrypted_password", "$2a$04$2ZgtePsIuHcXL9IuYEpfBe3XbmILGE.RjjPoKxCnUpFxgkqQFX522"], ["updated_at", "2017-03-01 20:31:09.222669"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "products" ("created_at", "price", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", "2017-03-01 20:31:09.224713"], ["price", 55.0976078894275], ["title", "Auto Audible Compressor"], ["updated_at", "2017-03-01 20:31:09.224713"], ["user_id", 11]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by Api::V1::OrdersController#create as application/vnd.marketplace.v1
+  Parameters: {"order"=>{"product_ids"=>["6", "7"]}, "user_id"=>"9"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."auth_token" = 'vXYNMapw6USBF2S17-Ba' LIMIT 1[0m
+  [1m[35mProduct Load (0.2ms)[0m  SELECT "products".* FROM "products"  WHERE "products"."id" IN (6, 7)
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "orders" ("created_at", "total", "updated_at", "user_id") VALUES (?, ?, ?, ?)  [["created_at", "2017-03-01 20:31:09.263368"], ["total", 56.47405086157993], ["updated_at", "2017-03-01 20:31:09.263368"], ["user_id", 9]]
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "placements" ("created_at", "order_id", "product_id", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", "2017-03-01 20:31:09.264267"], ["order_id", 1], ["product_id", 6], ["updated_at", "2017-03-01 20:31:09.264267"]]
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "placements" ("created_at", "order_id", "product_id", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", "2017-03-01 20:31:09.264993"], ["order_id", 1], ["product_id", 7], ["updated_at", "2017-03-01 20:31:09.264993"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+[active_model_serializers] Rendered OrderSerializer with ActiveModelSerializers::Adapter::Attributes (7.96ms)
+Completed 201 Created in 60ms (Views: 29.9ms | ActiveRecord: 1.1ms)
+  [1m[35m (0.7ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."auth_token" IS NULL LIMIT 1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = 'novella_kemmer@cremin.com' LIMIT 1
+  [1m[36mUser Exists (0.0ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."auth_token" = 'gF1cq1gy_oEKjgQtv_kz' LIMIT 1[0m
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("auth_token", "created_at", "email", "encrypted_password", "updated_at") VALUES (?, ?, ?, ?, ?)  [["auth_token", "gF1cq1gy_oEKjgQtv_kz"], ["created_at", "2017-03-01 20:31:09.300768"], ["email", "novella_kemmer@cremin.com"], ["encrypted_password", "$2a$04$DzcX6mFLnhMgj50oSloSiO2HseUy4g4ml8vs6PNukYrjew2wrgHH."], ["updated_at", "2017-03-01 20:31:09.300768"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."auth_token" IS NULL LIMIT 1[0m
+  [1m[35mUser Exists (0.0ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = 'paris@greenkassulke.co.uk' LIMIT 1
+  [1m[36mUser Exists (0.0ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."auth_token" = '_si1UB2D_4dgwpyWU5_V' LIMIT 1[0m
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("auth_token", "created_at", "email", "encrypted_password", "updated_at") VALUES (?, ?, ?, ?, ?)  [["auth_token", "_si1UB2D_4dgwpyWU5_V"], ["created_at", "2017-03-01 20:31:09.304817"], ["email", "paris@greenkassulke.co.uk"], ["encrypted_password", "$2a$04$zs6H5GHXCHig0Zq.jMBq2OwEHBwMg5tlUpKAqfbqEcNawDBIGFTUu"], ["updated_at", "2017-03-01 20:31:09.304817"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "products" ("created_at", "price", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", "2017-03-01 20:31:09.306489"], ["price", 86.8296204807113], ["title", "Digital Bracket"], ["updated_at", "2017-03-01 20:31:09.306489"], ["user_id", 10]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."auth_token" IS NULL LIMIT 1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'johnson@erdman.biz' LIMIT 1[0m
+  [1m[35mUser Exists (0.0ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."auth_token" = 'mPpBZsPdRaXSWEGiMFEm' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "users" ("auth_token", "created_at", "email", "encrypted_password", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["auth_token", "mPpBZsPdRaXSWEGiMFEm"], ["created_at", "2017-03-01 20:31:09.311329"], ["email", "johnson@erdman.biz"], ["encrypted_password", "$2a$04$8POZmn4WdOyLeaXMYLF.BeFbkPO6MD8CITn3Ip9T9eJZGhT/iMRBK"], ["updated_at", "2017-03-01 20:31:09.311329"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "products" ("created_at", "price", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?)  [["created_at", "2017-03-01 20:31:09.313182"], ["price", 76.0164444275206], ["title", "Disc Direct System"], ["updated_at", "2017-03-01 20:31:09.313182"], ["user_id", 11]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by Api::V1::OrdersController#create as application/vnd.marketplace.v1
+  Parameters: {"order"=>{"product_ids"=>["6", "7"]}, "user_id"=>"9"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."auth_token" = 'gF1cq1gy_oEKjgQtv_kz' LIMIT 1
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT "products".* FROM "products"  WHERE "products"."id" IN (6, 7)[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "orders" ("created_at", "total", "updated_at", "user_id") VALUES (?, ?, ?, ?)[0m  [["created_at", "2017-03-01 20:31:09.319162"], ["total", 162.8460649082319], ["updated_at", "2017-03-01 20:31:09.319162"], ["user_id", 9]]
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "placements" ("created_at", "order_id", "product_id", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", "2017-03-01 20:31:09.319960"], ["order_id", 1], ["product_id", 6], ["updated_at", "2017-03-01 20:31:09.319960"]]
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "placements" ("created_at", "order_id", "product_id", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", "2017-03-01 20:31:09.320683"], ["order_id", 1], ["product_id", 7], ["updated_at", "2017-03-01 20:31:09.320683"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+[active_model_serializers] Rendered OrderSerializer with ActiveModelSerializers::Adapter::Attributes (1.0ms)
+Completed 201 Created in 8ms (Views: 1.7ms | ActiveRecord: 0.6ms)
+  [1m[36m (1.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."auth_token" IS NULL LIMIT 1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'kizzy@mcclure.com' LIMIT 1[0m
+  [1m[35mUser Exists (0.0ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."auth_token" = 'o8YrFRjxqpkvXXazEBZR' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("auth_token", "created_at", "email", "encrypted_password", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["auth_token", "o8YrFRjxqpkvXXazEBZR"], ["created_at", "2017-03-01 20:31:09.328964"], ["email", "kizzy@mcclure.com"], ["encrypted_password", "$2a$04$UjbSWBjnRpc6m91Bjq2H3OFEyj4TWNiP/40XjDhOfd3rflgE.FjmS"], ["updated_at", "2017-03-01 20:31:09.328964"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."auth_token" IS NULL LIMIT 1
+  [1m[36mUser Exists (0.0ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'jorge@deckow.ca' LIMIT 1[0m
+  [1m[35mUser Exists (0.0ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."auth_token" = 'EwmfQJfxjzoEek11AipZ' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("auth_token", "created_at", "email", "encrypted_password", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["auth_token", "EwmfQJfxjzoEek11AipZ"], ["created_at", "2017-03-01 20:31:09.333096"], ["email", "jorge@deckow.ca"], ["encrypted_password", "$2a$04$Ppypwz20f.wngPn3.jDY5OghuW3SfxCQua/t7ylMmDw894Z9m93WO"], ["updated_at", "2017-03-01 20:31:09.333096"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "products" ("created_at", "price", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?)  [["created_at", "2017-03-01 20:31:09.334955"], ["price", 10.9716339664639], ["title", "Disc Filter"], ["updated_at", "2017-03-01 20:31:09.334955"], ["user_id", 10]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mProduct Load (0.2ms)[0m  SELECT  "products".* FROM "products"  WHERE "products"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "orders" ("created_at", "total", "updated_at", "user_id") VALUES (?, ?, ?, ?)  [["created_at", "2017-03-01 20:31:09.340136"], ["total", 10.9716339664639], ["updated_at", "2017-03-01 20:31:09.340136"], ["user_id", 9]]
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "placements" ("created_at", "order_id", "product_id", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", "2017-03-01 20:31:09.341595"], ["order_id", 1], ["product_id", 6], ["updated_at", "2017-03-01 20:31:09.341595"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by Api::V1::OrdersController#show as application/vnd.marketplace.v1
+  Parameters: {"user_id"=>"9", "id"=>"1", "order"=>{}}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."auth_token" = 'o8YrFRjxqpkvXXazEBZR' LIMIT 1[0m
+  [1m[35mOrder Load (0.1ms)[0m  SELECT  "orders".* FROM "orders"  WHERE "orders"."user_id" = ? AND "orders"."id" = ? LIMIT 1  [["user_id", 9], ["id", 1]]
+[active_model_serializers]   [1m[36mProduct Load (0.1ms)[0m  [1mSELECT "products".* FROM "products" INNER JOIN "placements" ON "products"."id" = "placements"."product_id" WHERE "placements"."order_id" = ?[0m  [["order_id", 1]]
+[active_model_serializers] Rendered OrderSerializer with ActiveModelSerializers::Adapter::Attributes (2.31ms)
+Completed 200 OK in 27ms (Views: 2.8ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.8ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."auth_token" IS NULL LIMIT 1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = 'yen@grady.name' LIMIT 1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."auth_token" = 'eJX-XyjeDUyxnAe83cSv' LIMIT 1[0m
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("auth_token", "created_at", "email", "encrypted_password", "updated_at") VALUES (?, ?, ?, ?, ?)  [["auth_token", "eJX-XyjeDUyxnAe83cSv"], ["created_at", "2017-03-01 20:31:09.376857"], ["email", "yen@grady.name"], ["encrypted_password", "$2a$04$J5xNDYqXj96yYZd68DcSCuTLoqxfDfJRX9Ku7w2eYAl1KJT.hUuPi"], ["updated_at", "2017-03-01 20:31:09.376857"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.0ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."auth_token" IS NULL LIMIT 1[0m
+  [1m[35mUser Exists (0.0ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = 'bettie@heidenreichsteuber.us' LIMIT 1
+  [1m[36mUser Exists (0.0ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."auth_token" = 'YX_r9gh8uzLVi7NiDxGz' LIMIT 1[0m
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("auth_token", "created_at", "email", "encrypted_password", "updated_at") VALUES (?, ?, ?, ?, ?)  [["auth_token", "YX_r9gh8uzLVi7NiDxGz"], ["created_at", "2017-03-01 20:31:09.381019"], ["email", "bettie@heidenreichsteuber.us"], ["encrypted_password", "$2a$04$IMlWLiX7ysfomhd2632v3.K3FcyJvf9KW.rThwxTCBJSlwIHaANXi"], ["updated_at", "2017-03-01 20:31:09.381019"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "products" ("created_at", "price", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", "2017-03-01 20:31:09.382745"], ["price", 12.2118730415772], ["title", "Auto Side System"], ["updated_at", "2017-03-01 20:31:09.382745"], ["user_id", 10]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mProduct Load (0.0ms)[0m  [1mSELECT  "products".* FROM "products"  WHERE "products"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "orders" ("created_at", "total", "updated_at", "user_id") VALUES (?, ?, ?, ?)[0m  [["created_at", "2017-03-01 20:31:09.385378"], ["total", 12.2118730415772], ["updated_at", "2017-03-01 20:31:09.385378"], ["user_id", 9]]
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "placements" ("created_at", "order_id", "product_id", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", "2017-03-01 20:31:09.386054"], ["order_id", 1], ["product_id", 6], ["updated_at", "2017-03-01 20:31:09.386054"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by Api::V1::OrdersController#show as application/vnd.marketplace.v1
+  Parameters: {"user_id"=>"9", "id"=>"1", "order"=>{}}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."auth_token" = 'eJX-XyjeDUyxnAe83cSv' LIMIT 1
+  [1m[36mOrder Load (0.0ms)[0m  [1mSELECT  "orders".* FROM "orders"  WHERE "orders"."user_id" = ? AND "orders"."id" = ? LIMIT 1[0m  [["user_id", 9], ["id", 1]]
+[active_model_serializers]   [1m[35mProduct Load (0.0ms)[0m  SELECT "products".* FROM "products" INNER JOIN "placements" ON "products"."id" = "placements"."product_id" WHERE "placements"."order_id" = ?  [["order_id", 1]]
+[active_model_serializers] Rendered OrderSerializer with ActiveModelSerializers::Adapter::Attributes (1.3ms)
+Completed 200 OK in 3ms (Views: 1.6ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.8ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."auth_token" IS NULL LIMIT 1
+  [1m[36mUser Exists (0.0ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'violeta_lang@prosaccorussel.us' LIMIT 1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."auth_token" = '1XF-Ea9Q1G7E217r75fD' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("auth_token", "created_at", "email", "encrypted_password", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["auth_token", "1XF-Ea9Q1G7E217r75fD"], ["created_at", "2017-03-01 20:31:09.398565"], ["email", "violeta_lang@prosaccorussel.us"], ["encrypted_password", "$2a$04$SYWFDzZiTdh3FLEr.UmMiOl12Si3eZwCWr4wEs4Q5dryNaZ4swaZa"], ["updated_at", "2017-03-01 20:31:09.398565"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."auth_token" IS NULL LIMIT 1
+  [1m[36mUser Exists (0.0ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'ophelia.buckridge@lueilwitz.biz' LIMIT 1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."auth_token" = '1oTFQ75D1-7LHxL_RiEt' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("auth_token", "created_at", "email", "encrypted_password", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["auth_token", "1oTFQ75D1-7LHxL_RiEt"], ["created_at", "2017-03-01 20:31:09.402670"], ["email", "ophelia.buckridge@lueilwitz.biz"], ["encrypted_password", "$2a$04$0HIiRfjEHbdPjnQaTAEOnu2y/hyr7nuzApQPZwB.EkALM56Cltqza"], ["updated_at", "2017-03-01 20:31:09.402670"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "products" ("created_at", "price", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?)  [["created_at", "2017-03-01 20:31:09.404615"], ["price", 51.8353956286218], ["title", "Input Amplifier"], ["updated_at", "2017-03-01 20:31:09.404615"], ["user_id", 10]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mProduct Load (0.0ms)[0m  SELECT  "products".* FROM "products"  WHERE "products"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "orders" ("created_at", "total", "updated_at", "user_id") VALUES (?, ?, ?, ?)  [["created_at", "2017-03-01 20:31:09.407922"], ["total", 51.8353956286218], ["updated_at", "2017-03-01 20:31:09.407922"], ["user_id", 9]]
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "placements" ("created_at", "order_id", "product_id", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", "2017-03-01 20:31:09.408714"], ["order_id", 1], ["product_id", 6], ["updated_at", "2017-03-01 20:31:09.408714"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by Api::V1::OrdersController#show as application/vnd.marketplace.v1
+  Parameters: {"user_id"=>"9", "id"=>"1", "order"=>{}}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."auth_token" = '1XF-Ea9Q1G7E217r75fD' LIMIT 1[0m
+  [1m[35mOrder Load (0.1ms)[0m  SELECT  "orders".* FROM "orders"  WHERE "orders"."user_id" = ? AND "orders"."id" = ? LIMIT 1  [["user_id", 9], ["id", 1]]
+[active_model_serializers]   [1m[36mProduct Load (0.0ms)[0m  [1mSELECT "products".* FROM "products" INNER JOIN "placements" ON "products"."id" = "placements"."product_id" WHERE "placements"."order_id" = ?[0m  [["order_id", 1]]
+[active_model_serializers] Rendered OrderSerializer with ActiveModelSerializers::Adapter::Attributes (1.39ms)
+Completed 200 OK in 8ms (Views: 1.7ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.7ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."auth_token" IS NULL LIMIT 1[0m
+  [1m[35mUser Exists (0.0ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = 'elizbeth.fisher@funk.info' LIMIT 1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."auth_token" = 'sWj7wPKpzJvrkQAiczzu' LIMIT 1[0m
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("auth_token", "created_at", "email", "encrypted_password", "updated_at") VALUES (?, ?, ?, ?, ?)  [["auth_token", "sWj7wPKpzJvrkQAiczzu"], ["created_at", "2017-03-01 20:31:09.423888"], ["email", "elizbeth.fisher@funk.info"], ["encrypted_password", "$2a$04$ijc0T3iCFA5zwYbVEg2zKuoPN//6Fe/11B2LffBMtB05o4aLkK/eC"], ["updated_at", "2017-03-01 20:31:09.423888"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."auth_token" IS NULL LIMIT 1[0m
+  [1m[35mUser Exists (0.0ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = 'hollis@adams.ca' LIMIT 1
+  [1m[36mUser Exists (0.0ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."auth_token" = 'S-UEFK7KQSZzfm3kdhRt' LIMIT 1[0m
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("auth_token", "created_at", "email", "encrypted_password", "updated_at") VALUES (?, ?, ?, ?, ?)  [["auth_token", "S-UEFK7KQSZzfm3kdhRt"], ["created_at", "2017-03-01 20:31:09.428625"], ["email", "hollis@adams.ca"], ["encrypted_password", "$2a$04$1WdI07H7ihgDqRKS6VetIulNlv/iRRYgv3Nh9CDedckhU73hRMZMq"], ["updated_at", "2017-03-01 20:31:09.428625"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "products" ("created_at", "price", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", "2017-03-01 20:31:09.430289"], ["price", 86.8536620566781], ["title", "HD Transmitter"], ["updated_at", "2017-03-01 20:31:09.430289"], ["user_id", 10]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mProduct Load (0.0ms)[0m  [1mSELECT  "products".* FROM "products"  WHERE "products"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "orders" ("created_at", "total", "updated_at", "user_id") VALUES (?, ?, ?, ?)[0m  [["created_at", "2017-03-01 20:31:09.432961"], ["total", 86.8536620566781], ["updated_at", "2017-03-01 20:31:09.432961"], ["user_id", 9]]
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "placements" ("created_at", "order_id", "product_id", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", "2017-03-01 20:31:09.433626"], ["order_id", 1], ["product_id", 6], ["updated_at", "2017-03-01 20:31:09.433626"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by Api::V1::OrdersController#show as application/vnd.marketplace.v1
+  Parameters: {"user_id"=>"9", "id"=>"1", "order"=>{}}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."auth_token" = 'sWj7wPKpzJvrkQAiczzu' LIMIT 1
+  [1m[36mOrder Load (0.1ms)[0m  [1mSELECT  "orders".* FROM "orders"  WHERE "orders"."user_id" = ? AND "orders"."id" = ? LIMIT 1[0m  [["user_id", 9], ["id", 1]]
+[active_model_serializers]   [1m[35mProduct Load (0.1ms)[0m  SELECT "products".* FROM "products" INNER JOIN "placements" ON "products"."id" = "placements"."product_id" WHERE "placements"."order_id" = ?  [["order_id", 1]]
+[active_model_serializers] Rendered OrderSerializer with ActiveModelSerializers::Adapter::Attributes (1.5ms)
+Completed 200 OK in 5ms (Views: 1.9ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.7ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."auth_token" IS NULL LIMIT 1
+  [1m[36mUser Exists (0.0ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'wyatt.cronin@kassulke.info' LIMIT 1[0m
+  [1m[35mUser Exists (0.0ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."auth_token" = 'yT4hQKByqxzqQ7RetFR-' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("auth_token", "created_at", "email", "encrypted_password", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["auth_token", "yT4hQKByqxzqQ7RetFR-"], ["created_at", "2017-03-01 20:31:09.445426"], ["email", "wyatt.cronin@kassulke.info"], ["encrypted_password", "$2a$04$SieNWsq4rpjZvVZXBQLSqebfz.4QlScBPGDToZgLb4hZpiRV.HwTy"], ["updated_at", "2017-03-01 20:31:09.445426"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "orders" ("created_at", "total", "updated_at", "user_id") VALUES (?, ?, ?, ?)  [["created_at", "2017-03-01 20:31:09.447509"], ["total", 0.0], ["updated_at", "2017-03-01 20:31:09.447509"], ["user_id", 9]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "orders" ("created_at", "total", "updated_at", "user_id") VALUES (?, ?, ?, ?)[0m  [["created_at", "2017-03-01 20:31:09.448937"], ["total", 0.0], ["updated_at", "2017-03-01 20:31:09.448937"], ["user_id", 9]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "orders" ("created_at", "total", "updated_at", "user_id") VALUES (?, ?, ?, ?)  [["created_at", "2017-03-01 20:31:09.450111"], ["total", 0.0], ["updated_at", "2017-03-01 20:31:09.450111"], ["user_id", 9]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "orders" ("created_at", "total", "updated_at", "user_id") VALUES (?, ?, ?, ?)[0m  [["created_at", "2017-03-01 20:31:09.451316"], ["total", 0.0], ["updated_at", "2017-03-01 20:31:09.451316"], ["user_id", 9]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by Api::V1::OrdersController#index as application/vnd.marketplace.v1
+  Parameters: {"user_id"=>"9", "order"=>{}}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."auth_token" = 'yT4hQKByqxzqQ7RetFR-' LIMIT 1[0m
+  [1m[35mOrder Load (0.2ms)[0m  SELECT "orders".* FROM "orders"  WHERE "orders"."user_id" = ?  [["user_id", 9]]
+[active_model_serializers]   [1m[36mProduct Load (0.0ms)[0m  [1mSELECT "products".* FROM "products" INNER JOIN "placements" ON "products"."id" = "placements"."product_id" WHERE "placements"."order_id" = ?[0m  [["order_id", 1]]
+[active_model_serializers]   [1m[35mProduct Load (0.0ms)[0m  SELECT "products".* FROM "products" INNER JOIN "placements" ON "products"."id" = "placements"."product_id" WHERE "placements"."order_id" = ?  [["order_id", 2]]
+[active_model_serializers]   [1m[36mProduct Load (0.0ms)[0m  [1mSELECT "products".* FROM "products" INNER JOIN "placements" ON "products"."id" = "placements"."product_id" WHERE "placements"."order_id" = ?[0m  [["order_id", 3]]
+[active_model_serializers]   [1m[35mProduct Load (0.0ms)[0m  SELECT "products".* FROM "products" INNER JOIN "placements" ON "products"."id" = "placements"."product_id" WHERE "placements"."order_id" = ?  [["order_id", 4]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (4.72ms)
+Completed 200 OK in 17ms (Views: 6.1ms | ActiveRecord: 0.4ms)
+  [1m[36m (0.9ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."auth_token" IS NULL LIMIT 1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'deon@erdmankiehn.name' LIMIT 1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."auth_token" = 'iQUuK_WyLEurA3KXmkx4' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("auth_token", "created_at", "email", "encrypted_password", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["auth_token", "iQUuK_WyLEurA3KXmkx4"], ["created_at", "2017-03-01 20:31:09.475950"], ["email", "deon@erdmankiehn.name"], ["encrypted_password", "$2a$04$tI6SV8HGRsl1H.5bYdKa3etZBGZs2P.E3mAZlNolN4DNdHIihNj9K"], ["updated_at", "2017-03-01 20:31:09.475950"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "orders" ("created_at", "total", "updated_at", "user_id") VALUES (?, ?, ?, ?)  [["created_at", "2017-03-01 20:31:09.478802"], ["total", 0.0], ["updated_at", "2017-03-01 20:31:09.478802"], ["user_id", 9]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "orders" ("created_at", "total", "updated_at", "user_id") VALUES (?, ?, ?, ?)[0m  [["created_at", "2017-03-01 20:31:09.480709"], ["total", 0.0], ["updated_at", "2017-03-01 20:31:09.480709"], ["user_id", 9]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "orders" ("created_at", "total", "updated_at", "user_id") VALUES (?, ?, ?, ?)  [["created_at", "2017-03-01 20:31:09.482316"], ["total", 0.0], ["updated_at", "2017-03-01 20:31:09.482316"], ["user_id", 9]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "orders" ("created_at", "total", "updated_at", "user_id") VALUES (?, ?, ?, ?)[0m  [["created_at", "2017-03-01 20:31:09.483658"], ["total", 0.0], ["updated_at", "2017-03-01 20:31:09.483658"], ["user_id", 9]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by Api::V1::OrdersController#index as application/vnd.marketplace.v1
+  Parameters: {"user_id"=>"9", "order"=>{}}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."auth_token" = 'iQUuK_WyLEurA3KXmkx4' LIMIT 1[0m
+  [1m[35mOrder Load (0.0ms)[0m  SELECT "orders".* FROM "orders"  WHERE "orders"."user_id" = ?  [["user_id", 9]]
+[active_model_serializers]   [1m[36mProduct Load (0.0ms)[0m  [1mSELECT "products".* FROM "products" INNER JOIN "placements" ON "products"."id" = "placements"."product_id" WHERE "placements"."order_id" = ?[0m  [["order_id", 1]]
+[active_model_serializers]   [1m[35mProduct Load (0.0ms)[0m  SELECT "products".* FROM "products" INNER JOIN "placements" ON "products"."id" = "placements"."product_id" WHERE "placements"."order_id" = ?  [["order_id", 2]]
+[active_model_serializers]   [1m[36mProduct Load (0.0ms)[0m  [1mSELECT "products".* FROM "products" INNER JOIN "placements" ON "products"."id" = "placements"."product_id" WHERE "placements"."order_id" = ?[0m  [["order_id", 3]]
+[active_model_serializers]   [1m[35mProduct Load (0.0ms)[0m  SELECT "products".* FROM "products" INNER JOIN "placements" ON "products"."id" = "placements"."product_id" WHERE "placements"."order_id" = ?  [["order_id", 4]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (4.14ms)
+Completed 200 OK in 6ms (Views: 5.0ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.7ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.3ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."auth_token" IS NULL LIMIT 1
+  [1m[36mUser Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'rowena.emmerich@gulgowskigraham.us' LIMIT 1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."auth_token" = 'hhx3i8rPhaAXYtNyeL6M' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "users" ("auth_token", "created_at", "email", "encrypted_password", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["auth_token", "hhx3i8rPhaAXYtNyeL6M"], ["created_at", "2017-03-01 20:32:13.744718"], ["email", "rowena.emmerich@gulgowskigraham.us"], ["encrypted_password", "$2a$04$whyqLdkmop9hvPxZV.oVmumQfOmo2NFgsjgxuyfExjxSBMFXuqwEu"], ["updated_at", "2017-03-01 20:32:13.744718"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "orders" ("created_at", "total", "updated_at", "user_id") VALUES (?, ?, ?, ?)  [["created_at", "2017-03-01 20:32:13.805818"], ["total", 0.0], ["updated_at", "2017-03-01 20:32:13.805818"], ["user_id", 9]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "orders" ("created_at", "total", "updated_at", "user_id") VALUES (?, ?, ?, ?)[0m  [["created_at", "2017-03-01 20:32:13.807887"], ["total", 0.0], ["updated_at", "2017-03-01 20:32:13.807887"], ["user_id", 9]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "orders" ("created_at", "total", "updated_at", "user_id") VALUES (?, ?, ?, ?)  [["created_at", "2017-03-01 20:32:13.809385"], ["total", 0.0], ["updated_at", "2017-03-01 20:32:13.809385"], ["user_id", 9]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "orders" ("created_at", "total", "updated_at", "user_id") VALUES (?, ?, ?, ?)[0m  [["created_at", "2017-03-01 20:32:13.811074"], ["total", 0.0], ["updated_at", "2017-03-01 20:32:13.811074"], ["user_id", 9]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by Api::V1::OrdersController#index as application/vnd.marketplace.v1
+  Parameters: {"user_id"=>"9", "order"=>{}}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."auth_token" = 'hhx3i8rPhaAXYtNyeL6M' LIMIT 1[0m
+  [1m[35mOrder Load (0.2ms)[0m  SELECT "orders".* FROM "orders"  WHERE "orders"."user_id" = ?  [["user_id", 9]]
+[active_model_serializers]   [1m[36mProduct Load (0.2ms)[0m  [1mSELECT "products".* FROM "products" INNER JOIN "placements" ON "products"."id" = "placements"."product_id" WHERE "placements"."order_id" = ?[0m  [["order_id", 1]]
+[active_model_serializers]   [1m[35mProduct Load (0.0ms)[0m  SELECT "products".* FROM "products" INNER JOIN "placements" ON "products"."id" = "placements"."product_id" WHERE "placements"."order_id" = ?  [["order_id", 2]]
+[active_model_serializers]   [1m[36mProduct Load (0.0ms)[0m  [1mSELECT "products".* FROM "products" INNER JOIN "placements" ON "products"."id" = "placements"."product_id" WHERE "placements"."order_id" = ?[0m  [["order_id", 3]]
+[active_model_serializers]   [1m[35mProduct Load (0.0ms)[0m  SELECT "products".* FROM "products" INNER JOIN "placements" ON "products"."id" = "placements"."product_id" WHERE "placements"."order_id" = ?  [["order_id", 4]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (6.79ms)
+Completed 200 OK in 48ms (Views: 27.6ms | ActiveRecord: 0.6ms)
+  [1m[36m (0.7ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."auth_token" IS NULL LIMIT 1
+  [1m[36mUser Exists (0.0ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'young_feil@douglas.name' LIMIT 1[0m
+  [1m[35mUser Exists (0.0ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."auth_token" = 'iWF6PEFRZicZbhyxn6pP' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("auth_token", "created_at", "email", "encrypted_password", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["auth_token", "iWF6PEFRZicZbhyxn6pP"], ["created_at", "2017-03-01 20:32:13.869748"], ["email", "young_feil@douglas.name"], ["encrypted_password", "$2a$04$fKkBKtkxv9VccgvnPXEvLeMkUVews8jiSDABkswe3kQzEolzGwZN."], ["updated_at", "2017-03-01 20:32:13.869748"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "orders" ("created_at", "total", "updated_at", "user_id") VALUES (?, ?, ?, ?)  [["created_at", "2017-03-01 20:32:13.871753"], ["total", 0.0], ["updated_at", "2017-03-01 20:32:13.871753"], ["user_id", 9]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "orders" ("created_at", "total", "updated_at", "user_id") VALUES (?, ?, ?, ?)[0m  [["created_at", "2017-03-01 20:32:13.873100"], ["total", 0.0], ["updated_at", "2017-03-01 20:32:13.873100"], ["user_id", 9]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "orders" ("created_at", "total", "updated_at", "user_id") VALUES (?, ?, ?, ?)  [["created_at", "2017-03-01 20:32:13.874248"], ["total", 0.0], ["updated_at", "2017-03-01 20:32:13.874248"], ["user_id", 9]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "orders" ("created_at", "total", "updated_at", "user_id") VALUES (?, ?, ?, ?)[0m  [["created_at", "2017-03-01 20:32:13.875421"], ["total", 0.0], ["updated_at", "2017-03-01 20:32:13.875421"], ["user_id", 9]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by Api::V1::OrdersController#index as application/vnd.marketplace.v1
+  Parameters: {"user_id"=>"9", "order"=>{}}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."auth_token" = 'iWF6PEFRZicZbhyxn6pP' LIMIT 1[0m
+  [1m[35mOrder Load (0.1ms)[0m  SELECT "orders".* FROM "orders"  WHERE "orders"."user_id" = ?  [["user_id", 9]]
+[active_model_serializers]   [1m[36mProduct Load (0.0ms)[0m  [1mSELECT "products".* FROM "products" INNER JOIN "placements" ON "products"."id" = "placements"."product_id" WHERE "placements"."order_id" = ?[0m  [["order_id", 1]]
+[active_model_serializers]   [1m[35mProduct Load (0.0ms)[0m  SELECT "products".* FROM "products" INNER JOIN "placements" ON "products"."id" = "placements"."product_id" WHERE "placements"."order_id" = ?  [["order_id", 2]]
+[active_model_serializers]   [1m[36mProduct Load (0.0ms)[0m  [1mSELECT "products".* FROM "products" INNER JOIN "placements" ON "products"."id" = "placements"."product_id" WHERE "placements"."order_id" = ?[0m  [["order_id", 3]]
+[active_model_serializers]   [1m[35mProduct Load (0.0ms)[0m  SELECT "products".* FROM "products" INNER JOIN "placements" ON "products"."id" = "placements"."product_id" WHERE "placements"."order_id" = ?  [["order_id", 4]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (3.75ms)
+Completed 200 OK in 6ms (Views: 4.6ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.7ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."auth_token" IS NULL LIMIT 1
+  [1m[36mUser Exists (0.0ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'tillie_fahey@lubowitz.co.uk' LIMIT 1[0m
+  [1m[35mUser Exists (0.0ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."auth_token" = 'yyLehyAC4CAHjcPHs58B' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("auth_token", "created_at", "email", "encrypted_password", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["auth_token", "yyLehyAC4CAHjcPHs58B"], ["created_at", "2017-03-01 20:32:13.888667"], ["email", "tillie_fahey@lubowitz.co.uk"], ["encrypted_password", "$2a$04$zN5IUJjsPJZ8BafqHI/hzu5CQneR8dSQIzZIGLVkF42vSVVEOrYue"], ["updated_at", "2017-03-01 20:32:13.888667"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."auth_token" IS NULL LIMIT 1
+  [1m[36mUser Exists (0.0ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'stacy_dickinson@mccullough.co.uk' LIMIT 1[0m
+  [1m[35mUser Exists (0.0ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."auth_token" = 'qGcuSQdzsuQ9xbTWq_C1' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("auth_token", "created_at", "email", "encrypted_password", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["auth_token", "qGcuSQdzsuQ9xbTWq_C1"], ["created_at", "2017-03-01 20:32:13.904166"], ["email", "stacy_dickinson@mccullough.co.uk"], ["encrypted_password", "$2a$04$B7lDZo41TkM8DxPmsnyiCOV5qP6DtE1wLNMHCcQIw9LBDG/x.MNEu"], ["updated_at", "2017-03-01 20:32:13.904166"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "products" ("created_at", "price", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?)  [["created_at", "2017-03-01 20:32:13.906429"], ["price", 96.6355110190911], ["title", "Remote System"], ["updated_at", "2017-03-01 20:32:13.906429"], ["user_id", 10]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."auth_token" IS NULL LIMIT 1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = 'jed@douglas.name' LIMIT 1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."auth_token" = 'zY-j_UhyJyhCuUuvqK7e' LIMIT 1[0m
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "users" ("auth_token", "created_at", "email", "encrypted_password", "updated_at") VALUES (?, ?, ?, ?, ?)  [["auth_token", "zY-j_UhyJyhCuUuvqK7e"], ["created_at", "2017-03-01 20:32:13.910572"], ["email", "jed@douglas.name"], ["encrypted_password", "$2a$04$3EvpSZE9DBd07XwLwJBw6.w8lFyXX7LhjYSuRopjQlGudCzb88Ske"], ["updated_at", "2017-03-01 20:32:13.910572"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "products" ("created_at", "price", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", "2017-03-01 20:32:13.912318"], ["price", 39.3164759295605], ["title", "Remote Filter"], ["updated_at", "2017-03-01 20:32:13.912318"], ["user_id", 11]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by Api::V1::OrdersController#create as application/vnd.marketplace.v1
+  Parameters: {"order"=>{"product_ids"=>["6", "7"]}, "user_id"=>"9"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."auth_token" = 'yyLehyAC4CAHjcPHs58B' LIMIT 1[0m
+  [1m[35mProduct Load (0.1ms)[0m  SELECT "products".* FROM "products"  WHERE "products"."id" IN (6, 7)
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "orders" ("created_at", "total", "updated_at", "user_id") VALUES (?, ?, ?, ?)  [["created_at", "2017-03-01 20:32:13.921233"], ["total", 135.9519869486516], ["updated_at", "2017-03-01 20:32:13.921233"], ["user_id", 9]]
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "placements" ("created_at", "order_id", "product_id", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", "2017-03-01 20:32:13.922029"], ["order_id", 1], ["product_id", 6], ["updated_at", "2017-03-01 20:32:13.922029"]]
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "placements" ("created_at", "order_id", "product_id", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", "2017-03-01 20:32:13.922733"], ["order_id", 1], ["product_id", 7], ["updated_at", "2017-03-01 20:32:13.922733"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+[active_model_serializers] Rendered OrderSerializer with ActiveModelSerializers::Adapter::Attributes (0.89ms)
+Completed 201 Created in 15ms (Views: 5.3ms | ActiveRecord: 0.7ms)
+  [1m[35m (0.8ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."auth_token" IS NULL LIMIT 1[0m
+  [1m[35mUser Exists (0.0ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = 'odelia.kessler@kessler.us' LIMIT 1
+  [1m[36mUser Exists (0.0ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."auth_token" = 'TqBJTjjkqrmyus969pdg' LIMIT 1[0m
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("auth_token", "created_at", "email", "encrypted_password", "updated_at") VALUES (?, ?, ?, ?, ?)  [["auth_token", "TqBJTjjkqrmyus969pdg"], ["created_at", "2017-03-01 20:32:13.933917"], ["email", "odelia.kessler@kessler.us"], ["encrypted_password", "$2a$04$6S1z1V9JriiGtoYQ.9NIbexvovnAyftklaZgMlivnjM1tnM2Qbclq"], ["updated_at", "2017-03-01 20:32:13.933917"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."auth_token" IS NULL LIMIT 1[0m
+  [1m[35mUser Exists (0.0ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = 'venus_bergstrom@wisozk.biz' LIMIT 1
+  [1m[36mUser Exists (0.0ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."auth_token" = 'k1fe6hTgzkmXwEmFE8bp' LIMIT 1[0m
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("auth_token", "created_at", "email", "encrypted_password", "updated_at") VALUES (?, ?, ?, ?, ?)  [["auth_token", "k1fe6hTgzkmXwEmFE8bp"], ["created_at", "2017-03-01 20:32:13.937682"], ["email", "venus_bergstrom@wisozk.biz"], ["encrypted_password", "$2a$04$6AB6QUdhXXBlu.yC7/iQ0OsGxkAY2jiIvnXsdEZ9FLqM1btIbT43a"], ["updated_at", "2017-03-01 20:32:13.937682"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "products" ("created_at", "price", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", "2017-03-01 20:32:13.939147"], ["price", 52.5119845584696], ["title", "Gel Adapter"], ["updated_at", "2017-03-01 20:32:13.939147"], ["user_id", 10]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."auth_token" IS NULL LIMIT 1
+  [1m[36mUser Exists (0.0ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'yu@deckow.biz' LIMIT 1[0m
+  [1m[35mUser Exists (0.0ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."auth_token" = 'epbPCizEAdsu8JYFn_m2' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "users" ("auth_token", "created_at", "email", "encrypted_password", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["auth_token", "epbPCizEAdsu8JYFn_m2"], ["created_at", "2017-03-01 20:32:13.942584"], ["email", "yu@deckow.biz"], ["encrypted_password", "$2a$04$6h3iJ7FIdwvE//7DBHsXbebr8uwBmlkVGNiv0MLkX0uK4suJLmG4S"], ["updated_at", "2017-03-01 20:32:13.942584"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "products" ("created_at", "price", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?)  [["created_at", "2017-03-01 20:32:13.944284"], ["price", 2.22226127179193], ["title", "Tag Input Kit"], ["updated_at", "2017-03-01 20:32:13.944284"], ["user_id", 11]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by Api::V1::OrdersController#create as application/vnd.marketplace.v1
+  Parameters: {"order"=>{"product_ids"=>["6", "7"]}, "user_id"=>"9"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."auth_token" = 'TqBJTjjkqrmyus969pdg' LIMIT 1
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT "products".* FROM "products"  WHERE "products"."id" IN (6, 7)[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "orders" ("created_at", "total", "updated_at", "user_id") VALUES (?, ?, ?, ?)[0m  [["created_at", "2017-03-01 20:32:13.949273"], ["total", 54.73424583026153], ["updated_at", "2017-03-01 20:32:13.949273"], ["user_id", 9]]
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "placements" ("created_at", "order_id", "product_id", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", "2017-03-01 20:32:13.949989"], ["order_id", 1], ["product_id", 6], ["updated_at", "2017-03-01 20:32:13.949989"]]
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "placements" ("created_at", "order_id", "product_id", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", "2017-03-01 20:32:13.950575"], ["order_id", 1], ["product_id", 7], ["updated_at", "2017-03-01 20:32:13.950575"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+[active_model_serializers] Rendered OrderSerializer with ActiveModelSerializers::Adapter::Attributes (0.51ms)
+Completed 201 Created in 7ms (Views: 1.2ms | ActiveRecord: 0.5ms)
+  [1m[36m (0.8ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."auth_token" IS NULL LIMIT 1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'willia@reynolds.info' LIMIT 1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."auth_token" = 'bATBdxoRj8y1zsiwdS9C' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("auth_token", "created_at", "email", "encrypted_password", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["auth_token", "bATBdxoRj8y1zsiwdS9C"], ["created_at", "2017-03-01 20:32:13.958956"], ["email", "willia@reynolds.info"], ["encrypted_password", "$2a$04$XLorpA9ht9UJ91pzr3.MQuU2oxienkdeNpFFHcstS7ZORvDpntTWK"], ["updated_at", "2017-03-01 20:32:13.958956"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."auth_token" IS NULL LIMIT 1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'aleta_aufderhar@legros.us' LIMIT 1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."auth_token" = '6534sxqA5YRvZzZNuy45' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("auth_token", "created_at", "email", "encrypted_password", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["auth_token", "6534sxqA5YRvZzZNuy45"], ["created_at", "2017-03-01 20:32:13.964336"], ["email", "aleta_aufderhar@legros.us"], ["encrypted_password", "$2a$04$o6mY/pkV6LiVLU/xI01lh.cVmdpXE7ikwgIPZWGvJWPHvjk5CLx8S"], ["updated_at", "2017-03-01 20:32:13.964336"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "products" ("created_at", "price", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?)  [["created_at", "2017-03-01 20:32:13.966145"], ["price", 94.6133757878967], ["title", "Audible Remote Kit"], ["updated_at", "2017-03-01 20:32:13.966145"], ["user_id", 10]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mProduct Load (0.1ms)[0m  SELECT  "products".* FROM "products"  WHERE "products"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "orders" ("created_at", "total", "updated_at", "user_id") VALUES (?, ?, ?, ?)  [["created_at", "2017-03-01 20:32:13.973385"], ["total", 94.6133757878967], ["updated_at", "2017-03-01 20:32:13.973385"], ["user_id", 9]]
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "placements" ("created_at", "order_id", "product_id", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", "2017-03-01 20:32:13.974133"], ["order_id", 1], ["product_id", 6], ["updated_at", "2017-03-01 20:32:13.974133"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by Api::V1::OrdersController#show as application/vnd.marketplace.v1
+  Parameters: {"user_id"=>"9", "id"=>"1", "order"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."auth_token" = 'bATBdxoRj8y1zsiwdS9C' LIMIT 1[0m
+  [1m[35mOrder Load (0.1ms)[0m  SELECT  "orders".* FROM "orders"  WHERE "orders"."user_id" = ? AND "orders"."id" = ? LIMIT 1  [["user_id", 9], ["id", 1]]
+[active_model_serializers]   [1m[36mProduct Load (0.0ms)[0m  [1mSELECT "products".* FROM "products" INNER JOIN "placements" ON "products"."id" = "placements"."product_id" WHERE "placements"."order_id" = ?[0m  [["order_id", 1]]
+[active_model_serializers] Rendered OrderSerializer with ActiveModelSerializers::Adapter::Attributes (1.19ms)
+Completed 200 OK in 11ms (Views: 1.5ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.6ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."auth_token" IS NULL LIMIT 1[0m
+  [1m[35mUser Exists (0.0ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = 'mirian.sawayn@goodwin.com' LIMIT 1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."auth_token" = 'U6EwYxzPs2BFAJgeRrYH' LIMIT 1[0m
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("auth_token", "created_at", "email", "encrypted_password", "updated_at") VALUES (?, ?, ?, ?, ?)  [["auth_token", "U6EwYxzPs2BFAJgeRrYH"], ["created_at", "2017-03-01 20:32:13.991738"], ["email", "mirian.sawayn@goodwin.com"], ["encrypted_password", "$2a$04$I.ZM1EGhUYIMFPDKmSOF.OD10zJu/4UYsWZSHN4VPsbGIpxO4CZlu"], ["updated_at", "2017-03-01 20:32:13.991738"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."auth_token" IS NULL LIMIT 1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = 'dulcie_friesen@thompson.name' LIMIT 1
+  [1m[36mUser Exists (0.0ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."auth_token" = 'pCsrhysS9iCtBMXB5WX1' LIMIT 1[0m
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("auth_token", "created_at", "email", "encrypted_password", "updated_at") VALUES (?, ?, ?, ?, ?)  [["auth_token", "pCsrhysS9iCtBMXB5WX1"], ["created_at", "2017-03-01 20:32:13.996226"], ["email", "dulcie_friesen@thompson.name"], ["encrypted_password", "$2a$04$i6s5o9cJuswXldItnMEUV.BQXowZ14dpVQzGxJuEPVxFo7eGt/aCC"], ["updated_at", "2017-03-01 20:32:13.996226"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "products" ("created_at", "price", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", "2017-03-01 20:32:13.997981"], ["price", 87.54089137136], ["title", "Side Tag Compressor"], ["updated_at", "2017-03-01 20:32:13.997981"], ["user_id", 10]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mProduct Load (0.0ms)[0m  [1mSELECT  "products".* FROM "products"  WHERE "products"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "orders" ("created_at", "total", "updated_at", "user_id") VALUES (?, ?, ?, ?)[0m  [["created_at", "2017-03-01 20:32:14.000834"], ["total", 87.54089137136], ["updated_at", "2017-03-01 20:32:14.000834"], ["user_id", 9]]
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "placements" ("created_at", "order_id", "product_id", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", "2017-03-01 20:32:14.001669"], ["order_id", 1], ["product_id", 6], ["updated_at", "2017-03-01 20:32:14.001669"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by Api::V1::OrdersController#show as application/vnd.marketplace.v1
+  Parameters: {"user_id"=>"9", "id"=>"1", "order"=>{}}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."auth_token" = 'U6EwYxzPs2BFAJgeRrYH' LIMIT 1
+  [1m[36mOrder Load (0.0ms)[0m  [1mSELECT  "orders".* FROM "orders"  WHERE "orders"."user_id" = ? AND "orders"."id" = ? LIMIT 1[0m  [["user_id", 9], ["id", 1]]
+[active_model_serializers]   [1m[35mProduct Load (0.0ms)[0m  SELECT "products".* FROM "products" INNER JOIN "placements" ON "products"."id" = "placements"."product_id" WHERE "placements"."order_id" = ?  [["order_id", 1]]
+[active_model_serializers] Rendered OrderSerializer with ActiveModelSerializers::Adapter::Attributes (1.03ms)
+Completed 200 OK in 3ms (Views: 1.4ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.6ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."auth_token" IS NULL LIMIT 1
+  [1m[36mUser Exists (0.0ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'irwin.hermiston@kertzmannschmitt.us' LIMIT 1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."auth_token" = 'yziucTudauKNktD99TxH' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("auth_token", "created_at", "email", "encrypted_password", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["auth_token", "yziucTudauKNktD99TxH"], ["created_at", "2017-03-01 20:32:14.014292"], ["email", "irwin.hermiston@kertzmannschmitt.us"], ["encrypted_password", "$2a$04$j9rZnVqnc6DO.OfwBUBFde1Cb0hBri8JZFEz/DbvLG6X2UU2woGqm"], ["updated_at", "2017-03-01 20:32:14.014292"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.0ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."auth_token" IS NULL LIMIT 1
+  [1m[36mUser Exists (0.0ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'leo@kirlin.name' LIMIT 1[0m
+  [1m[35mUser Exists (0.0ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."auth_token" = 'z7wcuAu5X2x8tRtk7zdq' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("auth_token", "created_at", "email", "encrypted_password", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["auth_token", "z7wcuAu5X2x8tRtk7zdq"], ["created_at", "2017-03-01 20:32:14.018006"], ["email", "leo@kirlin.name"], ["encrypted_password", "$2a$04$tnYkJvfqutKYGK/PbYTcJudOGIIjFilO6ixbBf3w8ytarjGJpDI46"], ["updated_at", "2017-03-01 20:32:14.018006"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "products" ("created_at", "price", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?)  [["created_at", "2017-03-01 20:32:14.019502"], ["price", 38.3598204538661], ["title", "Power Auto Viewer"], ["updated_at", "2017-03-01 20:32:14.019502"], ["user_id", 10]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mProduct Load (0.0ms)[0m  SELECT  "products".* FROM "products"  WHERE "products"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "orders" ("created_at", "total", "updated_at", "user_id") VALUES (?, ?, ?, ?)  [["created_at", "2017-03-01 20:32:14.022803"], ["total", 38.3598204538661], ["updated_at", "2017-03-01 20:32:14.022803"], ["user_id", 9]]
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "placements" ("created_at", "order_id", "product_id", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", "2017-03-01 20:32:14.023737"], ["order_id", 1], ["product_id", 6], ["updated_at", "2017-03-01 20:32:14.023737"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by Api::V1::OrdersController#show as application/vnd.marketplace.v1
+  Parameters: {"user_id"=>"9", "id"=>"1", "order"=>{}}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."auth_token" = 'yziucTudauKNktD99TxH' LIMIT 1[0m
+  [1m[35mOrder Load (0.0ms)[0m  SELECT  "orders".* FROM "orders"  WHERE "orders"."user_id" = ? AND "orders"."id" = ? LIMIT 1  [["user_id", 9], ["id", 1]]
+[active_model_serializers]   [1m[36mProduct Load (0.1ms)[0m  [1mSELECT "products".* FROM "products" INNER JOIN "placements" ON "products"."id" = "placements"."product_id" WHERE "placements"."order_id" = ?[0m  [["order_id", 1]]
+[active_model_serializers] Rendered OrderSerializer with ActiveModelSerializers::Adapter::Attributes (1.1ms)
+Completed 200 OK in 3ms (Views: 1.4ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.7ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."auth_token" IS NULL LIMIT 1[0m
+  [1m[35mUser Exists (0.0ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = 'maryam@rolfson.info' LIMIT 1
+  [1m[36mUser Exists (0.0ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."auth_token" = 'TrWNLQyidogzj1zgZXsu' LIMIT 1[0m
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("auth_token", "created_at", "email", "encrypted_password", "updated_at") VALUES (?, ?, ?, ?, ?)  [["auth_token", "TrWNLQyidogzj1zgZXsu"], ["created_at", "2017-03-01 20:32:14.034317"], ["email", "maryam@rolfson.info"], ["encrypted_password", "$2a$04$PuTpQ5a6yoCTOmEJcNLzU.T3ap7gYXEDzOQIl9jOHUtaaBL9w8z/C"], ["updated_at", "2017-03-01 20:32:14.034317"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."auth_token" IS NULL LIMIT 1[0m
+  [1m[35mUser Exists (0.0ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = 'kelsi_mante@hackett.co.uk' LIMIT 1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."auth_token" = 'kutHs5ir8vHhEyVBh87s' LIMIT 1[0m
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("auth_token", "created_at", "email", "encrypted_password", "updated_at") VALUES (?, ?, ?, ?, ?)  [["auth_token", "kutHs5ir8vHhEyVBh87s"], ["created_at", "2017-03-01 20:32:14.038166"], ["email", "kelsi_mante@hackett.co.uk"], ["encrypted_password", "$2a$04$cCSrIfgPGTq8ds4qvXIhvOLrnIH0TXTKYCQCetasnz/5h/P8S6YXy"], ["updated_at", "2017-03-01 20:32:14.038166"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "products" ("created_at", "price", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", "2017-03-01 20:32:14.039636"], ["price", 83.3027581761631], ["title", "Output Component"], ["updated_at", "2017-03-01 20:32:14.039636"], ["user_id", 10]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mProduct Load (0.0ms)[0m  [1mSELECT  "products".* FROM "products"  WHERE "products"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "orders" ("created_at", "total", "updated_at", "user_id") VALUES (?, ?, ?, ?)[0m  [["created_at", "2017-03-01 20:32:14.042356"], ["total", 83.3027581761631], ["updated_at", "2017-03-01 20:32:14.042356"], ["user_id", 9]]
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "placements" ("created_at", "order_id", "product_id", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", "2017-03-01 20:32:14.043289"], ["order_id", 1], ["product_id", 6], ["updated_at", "2017-03-01 20:32:14.043289"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by Api::V1::OrdersController#show as application/vnd.marketplace.v1
+  Parameters: {"user_id"=>"9", "id"=>"1", "order"=>{}}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."auth_token" = 'TrWNLQyidogzj1zgZXsu' LIMIT 1
+  [1m[36mOrder Load (0.1ms)[0m  [1mSELECT  "orders".* FROM "orders"  WHERE "orders"."user_id" = ? AND "orders"."id" = ? LIMIT 1[0m  [["user_id", 9], ["id", 1]]
+[active_model_serializers]   [1m[35mProduct Load (0.0ms)[0m  SELECT "products".* FROM "products" INNER JOIN "placements" ON "products"."id" = "placements"."product_id" WHERE "placements"."order_id" = ?  [["order_id", 1]]
+[active_model_serializers] Rendered OrderSerializer with ActiveModelSerializers::Adapter::Attributes (1.11ms)
+Completed 200 OK in 4ms (Views: 1.4ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.7ms)[0m  [1mrollback transaction[0m
