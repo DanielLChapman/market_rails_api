@@ -1695,3 +1695,57 @@ Processing by Api::V1::OrdersController#index as JSON
   [1m[35mOrder Load (0.2ms)[0m  SELECT "orders".* FROM "orders"  WHERE "orders"."user_id" = ?  [["user_id", 1]]
 [active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.07ms)
 Completed 200 OK in 14ms (Views: 0.9ms | ActiveRecord: 0.5ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."auth_token" IS NULL LIMIT 1[0m
+  [1m[35mUser Exists (0.5ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = 'calandra_paucek@feil.info' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (1.3ms)[0m  [1mINSERT INTO "products" ("created_at", "price", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", "2017-03-01 20:57:35.696063"], ["price", 12.5145400660637], ["title", "Gel Performance Case"], ["updated_at", "2017-03-01 20:57:35.696063"], ["user_id", 1]]
+  [1m[35m (2.6ms)[0m  commit transaction
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT  "products".* FROM "products"  WHERE "products"."id" = ? LIMIT 1[0m  [["id", 21]]
+  [1m[35m (0.4ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "orders" ("created_at", "total", "updated_at", "user_id") VALUES (?, ?, ?, ?)[0m  [["created_at", "2017-03-01 20:58:08.178361"], ["total", 12.5145400660637], ["updated_at", "2017-03-01 20:58:08.178361"], ["user_id", 1]]
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "placements" ("created_at", "order_id", "product_id", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", "2017-03-01 20:58:08.179644"], ["order_id", 1], ["product_id", 21], ["updated_at", "2017-03-01 20:58:08.179644"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+
+
+Started GET "/users/1/orders" for 127.0.0.1 at 2017-03-01 15:58:14 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Api::V1::OrdersController#index as JSON
+  Parameters: {"subdomain"=>"api", "user_id"=>"1"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."auth_token" IS NULL LIMIT 1
+  [1m[36mOrder Load (0.3ms)[0m  [1mSELECT "orders".* FROM "orders"  WHERE "orders"."user_id" = ?[0m  [["user_id", 1]]
+[active_model_serializers]   [1m[35mProduct Load (0.2ms)[0m  SELECT "products".* FROM "products" INNER JOIN "placements" ON "products"."id" = "placements"."product_id" WHERE "placements"."order_id" = ?  [["order_id", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (22.67ms)
+Completed 200 OK in 104ms (Views: 52.5ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/users/1/orders/1" for 127.0.0.1 at 2017-03-01 15:58:18 -0500
+Processing by Api::V1::OrdersController#show as JSON
+  Parameters: {"subdomain"=>"api", "user_id"=>"1", "id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."auth_token" IS NULL LIMIT 1[0m
+  [1m[35mOrder Load (0.1ms)[0m  SELECT  "orders".* FROM "orders"  WHERE "orders"."user_id" = ? AND "orders"."id" = ? LIMIT 1  [["user_id", 1], ["id", 1]]
+[active_model_serializers]   [1m[36mProduct Load (0.1ms)[0m  [1mSELECT "products".* FROM "products" INNER JOIN "placements" ON "products"."id" = "placements"."product_id" WHERE "placements"."order_id" = ?[0m  [["order_id", 1]]
+[active_model_serializers] Rendered OrderSerializer with ActiveModelSerializers::Adapter::Attributes (1.16ms)
+Completed 200 OK in 7ms (Views: 1.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2017-03-01 15:58:23 -0500
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"subdomain"=>"api", "id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."auth_token" IS NULL LIMIT 1[0m
+[active_model_serializers]   [1m[35mProduct Load (0.3ms)[0m  SELECT "products".* FROM "products"  WHERE "products"."user_id" = ?  [["user_id", 1]]
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (11.94ms)
+Completed 200 OK in 23ms (Views: 15.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users/1/orders" for 127.0.0.1 at 2017-03-01 15:58:30 -0500
+Processing by Api::V1::OrdersController#index as JSON
+  Parameters: {"subdomain"=>"api", "user_id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."auth_token" IS NULL LIMIT 1[0m
+  [1m[35mOrder Load (0.1ms)[0m  SELECT "orders".* FROM "orders"  WHERE "orders"."user_id" = ?  [["user_id", 1]]
+[active_model_serializers]   [1m[36mProduct Load (0.1ms)[0m  [1mSELECT "products".* FROM "products" INNER JOIN "placements" ON "products"."id" = "placements"."product_id" WHERE "placements"."order_id" = ?[0m  [["order_id", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.28ms)
+Completed 200 OK in 7ms (Views: 2.0ms | ActiveRecord: 0.3ms)
