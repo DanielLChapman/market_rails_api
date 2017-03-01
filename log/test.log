@@ -26040,3 +26040,115 @@ Binary data inserted for `string` type on column `encrypted_password`
   [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
   [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."auth_token" = 'auniquetoken123' LIMIT 1
   [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"   ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."auth_token" = '4wzUCcLxL6XpimDSTMnx' LIMIT 1[0m
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "users" ("auth_token", "created_at", "email", "encrypted_password", "updated_at") VALUES (?, ?, ?, ?, ?)  [["auth_token", "4wzUCcLxL6XpimDSTMnx"], ["created_at", "2017-03-01 16:17:15.133367"], ["email", "lettie@maggio.info"], ["encrypted_password", "$2a$04$UImG/JmL1zOVmRPPSL8UGu5dyr/pW4.z5t.w0bo.E/W7OaGB9421a"], ["updated_at", "2017-03-01 16:17:15.133367"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."auth_token" = '4wzUCcLxL6XpimDSTMnx' LIMIT 1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'lettie@maggio.info' LIMIT 1[0m
+  [1m[35mUser Exists (0.0ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."auth_token" = '4WZucClXl6xPIMdstmNX' LIMIT 1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'lettie@maggio.info' LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"   ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."auth_token" = 'xj1ro6Bw_p9Hgy5Pmcpk' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("auth_token", "created_at", "email", "encrypted_password", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["auth_token", "xj1ro6Bw_p9Hgy5Pmcpk"], ["created_at", "2017-03-01 16:17:15.186559"], ["email", "franklin_daniel@huelsspinka.biz"], ["encrypted_password", "$2a$04$3CJ6HpCOedgb73U72pfXOO1ORyIzNq8HKcjlVA7pPbauaH6a/pkXm"], ["updated_at", "2017-03-01 16:17:15.186559"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."auth_token" = 'xj1ro6Bw_p9Hgy5Pmcpk' LIMIT 1[0m
+  [1m[35mUser Exists (0.0ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = 'franklin_daniel@huelsspinka.biz' LIMIT 1
+  [1m[36m (0.4ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."auth_token" IS NULL LIMIT 1[0m
+  [1m[35mUser Exists (0.0ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = 'claretta_runte@heller.info' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."auth_token" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."auth_token" IS NULL LIMIT 1
+  [1m[36mUser Exists (0.0ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'example@domain.com' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."auth_token" IS NULL LIMIT 1
+  [1m[36mUser Exists (0.0ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'vincent.luettgen@willms.co.uk' LIMIT 1[0m
+  [1m[35mUser Exists (0.0ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."auth_token" IS NULL LIMIT 1
+  [1m[36mUser Exists (0.0ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'vincent.luettgen@willms.co.uk' LIMIT 1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."auth_token" IS NULL LIMIT 1
+  [1m[36mUser Exists (0.0ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'vincent.luettgen@willms.co.uk' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."auth_token" IS NULL LIMIT 1[0m
+  [1m[35mUser Exists (0.0ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = 'eartha_jenkins@sawayn.com' LIMIT 1
+  [1m[36mUser Exists (0.0ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."auth_token" = 'aNB8LRBNcDp46NyqwGDt' LIMIT 1[0m
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("auth_token", "created_at", "email", "encrypted_password", "updated_at") VALUES (?, ?, ?, ?, ?)  [["auth_token", "aNB8LRBNcDp46NyqwGDt"], ["created_at", "2017-03-01 16:17:15.229236"], ["email", "eartha_jenkins@sawayn.com"], ["encrypted_password", "$2a$04$iNYBXy6ueOL5bHwGpeMU5uu38m/px5sWEuGgYAiFqHMwKqwWk42n6"], ["updated_at", "2017-03-01 16:17:15.229236"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "products" ("created_at", "price", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", "2017-03-01 16:17:15.242221"], ["price", 26.0779844254722], ["title", "Tag Air Receiver"], ["updated_at", "2017-03-01 16:17:15.242221"], ["user_id", 1]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "products" ("created_at", "price", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?)  [["created_at", "2017-03-01 16:17:15.244161"], ["price", 26.9760904825474], ["title", "Tag Auto Kit"], ["updated_at", "2017-03-01 16:17:15.244161"], ["user_id", 1]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "products" ("created_at", "price", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", "2017-03-01 16:17:15.245423"], ["price", 35.8230898700405], ["title", "Portable Output Mount"], ["updated_at", "2017-03-01 16:17:15.245423"], ["user_id", 1]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mProduct Load (0.1ms)[0m  SELECT "products".* FROM "products"  WHERE "products"."user_id" = ?  [["user_id", 1]]
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "products" WHERE "products"."id" = ?[0m  [["id", 1]]
+  [1m[35mSQL (0.0ms)[0m  DELETE FROM "products" WHERE "products"."id" = ?  [["id", 2]]
+  [1m[36mSQL (0.0ms)[0m  [1mDELETE FROM "products" WHERE "products"."id" = ?[0m  [["id", 3]]
+  [1m[35mOrder Load (0.1ms)[0m  SELECT "orders".* FROM "orders"  WHERE "orders"."user_id" = ?  [["user_id", 1]]
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.7ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."auth_token" = 'auniquetoken123' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."auth_token" = 'auniquetoken123' LIMIT 1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = 'sylvie_gislason@ziemann.ca' LIMIT 1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."auth_token" = 'Ps2q2oULGdFnMWyD9zZU' LIMIT 1[0m
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("auth_token", "created_at", "email", "encrypted_password", "updated_at") VALUES (?, ?, ?, ?, ?)  [["auth_token", "Ps2q2oULGdFnMWyD9zZU"], ["created_at", "2017-03-01 16:17:15.268820"], ["email", "sylvie_gislason@ziemann.ca"], ["encrypted_password", "$2a$04$Kx83WA4orGxC9w0e1wtP1ebMG/MWwhSqzI7GZwlBohRdrpYx/V/tC"], ["updated_at", "2017-03-01 16:17:15.268820"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."auth_token" = 'hyK4TbG6nph5aStsJLaz' LIMIT 1
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m
