@@ -18,15 +18,48 @@ RSpec.describe Api::V1::ProductsController, type: :controller do
 	describe "Get #index" do
 		before(:each) do
 			4.times { FactoryGirl.create :product }
-			get :index
 		end
 		
-		it "returns 4 records from the database" do
-			products_response = json_response
-			products_response.length.should eql(4)
+		context "when is not recieving any product_ids paramter" do
+			before(:each) do
+				get :index
+			end
+			it "returns 4 records from the database" do
+				products_response = json_response
+				products_response.length.should eql(4)
+			end
+
+			it {should respond_with 200 }
+
+			it "returns the user object into each producT" do
+				products_response = json_response
+				products_response.each do |pr|
+					pr[:user].should be_present
+				end
+			end
+
+			it { json_response.should have_key(:meta) }
+			it { json_response[:meta].should have_key(:pagination) }
+			it { json_response[:meta][:pagination].should have_key(:per_page) }
+			it { json_response[:meta][:pagination].should have_key(:total_pages) }
+			it { json_response[:meta][:pagination].should have_key(:total_objects) }
+			
 		end
 		
-		it {should respond_with 200 }
+		context "when product_ids parameter is sent" do
+		  	before(:each) do
+				@user = FactoryGirl.create :user
+				3.times { FactoryGirl.create :product, user: @user }
+				get :index, product_ids: @user.product_ids
+			end
+
+		  	it "returns just the products that belong to the user" do
+				products_response = json_response
+				products_response.each do |product_response|
+					product_response[:user][:email].should eql @user.email
+				end
+			end
+		end
 	end
 	
 	describe "POST #create" do

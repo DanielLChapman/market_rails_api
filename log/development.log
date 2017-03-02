@@ -1982,3 +1982,321 @@ Migrating to AddQuantityToPlacements (20170301213109)
   [1m[35m (0.7ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20170301160409')
   [1m[36m (0.7ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20170301160715')[0m
   [1m[35m (0.7ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20170301210403')
+
+
+Started GET "/products/1" for 127.0.0.1 at 2017-03-02 15:53:22 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Api::V1::ProductsController#show as JSON
+  Parameters: {"subdomain"=>"api", "id"=>"1"}
+  [1m[35mProduct Load (0.1ms)[0m  SELECT  "products".* FROM "products"  WHERE "products"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."auth_token" IS NULL LIMIT 1[0m
+[active_model_serializers]   [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+[active_model_serializers] Rendered ProductSerializer with ActiveModelSerializers::Adapter::Attributes (23.84ms)
+Completed 200 OK in 97ms (Views: 59.4ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/products/1" for 127.0.0.1 at 2017-03-02 15:56:28 -0500
+Processing by Api::V1::ProductsController#show as JSON
+  Parameters: {"subdomain"=>"api", "id"=>"1"}
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT  "products".* FROM "products"  WHERE "products"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."auth_token" IS NULL LIMIT 1
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+[active_model_serializers] Rendered ProductSerializer with ActiveModelSerializers::Adapter::Attributes (1.31ms)
+Completed 200 OK in 11ms (Views: 2.2ms | ActiveRecord: 0.4ms)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.5ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."auth_token" IS NULL LIMIT 1
+  [1m[36mUser Exists (0.5ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'thomas@ondricka.ca' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "products" ("created_at", "price", "quantity", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", "2017-03-02 20:57:21.456819"], ["price", 93.1944011192354], ["quantity", 5], ["title", "Remote Case"], ["updated_at", "2017-03-02 20:57:21.456819"], ["user_id", 1]]
+  [1m[35m (3.1ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "products" ("created_at", "price", "quantity", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", "2017-03-02 20:57:21.462826"], ["price", 93.9012317794813], ["quantity", 5], ["title", "Portable Side Transmitter"], ["updated_at", "2017-03-02 20:57:21.462826"], ["user_id", 1]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "products" ("created_at", "price", "quantity", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", "2017-03-02 20:57:21.465183"], ["price", 83.0987508990172], ["quantity", 5], ["title", "Electric Component"], ["updated_at", "2017-03-02 20:57:21.465183"], ["user_id", 1]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "products" ("created_at", "price", "quantity", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", "2017-03-02 20:57:21.467392"], ["price", 97.2608543135769], ["quantity", 5], ["title", "Input Tuner"], ["updated_at", "2017-03-02 20:57:21.467392"], ["user_id", 1]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+
+
+Started GET "/products/1" for 127.0.0.1 at 2017-03-02 15:57:25 -0500
+Processing by Api::V1::ProductsController#show as JSON
+  Parameters: {"subdomain"=>"api", "id"=>"1"}
+  [1m[35mProduct Load (0.1ms)[0m  SELECT  "products".* FROM "products"  WHERE "products"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."auth_token" IS NULL LIMIT 1[0m
+[active_model_serializers]   [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+[active_model_serializers] Rendered ProductSerializer with ActiveModelSerializers::Adapter::Attributes (0.9ms)
+Completed 200 OK in 8ms (Views: 1.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/products/1" for 127.0.0.1 at 2017-03-02 15:57:28 -0500
+Processing by Api::V1::ProductsController#show as JSON
+  Parameters: {"subdomain"=>"api", "id"=>"1"}
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT  "products".* FROM "products"  WHERE "products"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."auth_token" IS NULL LIMIT 1
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+[active_model_serializers] Rendered ProductSerializer with ActiveModelSerializers::Adapter::Attributes (1.17ms)
+Completed 200 OK in 10ms (Views: 2.1ms | ActiveRecord: 0.4ms)
+  [1m[35mProduct Load (0.3ms)[0m  SELECT "products".* FROM "products"
+
+
+Started GET "/products/" for 127.0.0.1 at 2017-03-02 15:58:00 -0500
+Processing by Api::V1::ProductsController#index as JSON
+  Parameters: {"subdomain"=>"api"}
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "products"
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."auth_token" IS NULL LIMIT 1[0m
+  [1m[35mProduct Load (0.2ms)[0m  SELECT  "products".* FROM "products"  LIMIT 25 OFFSET 0
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+[active_model_serializers]   [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+[active_model_serializers]   [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+[active_model_serializers]   [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+[active_model_serializers]   [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+[active_model_serializers]   [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+[active_model_serializers]   [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+[active_model_serializers]   [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+[active_model_serializers]   [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+[active_model_serializers]   [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+[active_model_serializers]   [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+[active_model_serializers]   [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+[active_model_serializers]   [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (16.28ms)
+Completed 200 OK in 24ms (Views: 18.4ms | ActiveRecord: 0.8ms)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.2ms)[0m  INSERT INTO "products" ("created_at", "price", "quantity", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", "2017-03-02 20:58:35.052004"], ["price", 79.8249934832103], ["quantity", 5], ["title", "Performance Auto Compressor"], ["updated_at", "2017-03-02 20:58:35.052004"], ["user_id", 1]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "products" ("created_at", "price", "quantity", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", "2017-03-02 20:58:35.056002"], ["price", 29.3093933661159], ["quantity", 5], ["title", "Video Direct Viewer"], ["updated_at", "2017-03-02 20:58:35.056002"], ["user_id", 1]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "products" ("created_at", "price", "quantity", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", "2017-03-02 20:58:35.058306"], ["price", 17.5825688017794], ["quantity", 5], ["title", "Disc System"], ["updated_at", "2017-03-02 20:58:35.058306"], ["user_id", 1]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "products" ("created_at", "price", "quantity", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", "2017-03-02 20:58:35.060436"], ["price", 86.2379734369592], ["quantity", 5], ["title", "Power Component"], ["updated_at", "2017-03-02 20:58:35.060436"], ["user_id", 1]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "products" ("created_at", "price", "quantity", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", "2017-03-02 20:58:36.066985"], ["price", 65.5064593135985], ["quantity", 5], ["title", "Video GPS Case"], ["updated_at", "2017-03-02 20:58:36.066985"], ["user_id", 1]]
+  [1m[36m (1.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "products" ("created_at", "price", "quantity", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", "2017-03-02 20:58:36.070798"], ["price", 55.0685783471128], ["quantity", 5], ["title", "Performance Controller"], ["updated_at", "2017-03-02 20:58:36.070798"], ["user_id", 1]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "products" ("created_at", "price", "quantity", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", "2017-03-02 20:58:36.073605"], ["price", 80.229264848873], ["quantity", 5], ["title", "Side Adapter"], ["updated_at", "2017-03-02 20:58:36.073605"], ["user_id", 1]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "products" ("created_at", "price", "quantity", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", "2017-03-02 20:58:36.076050"], ["price", 64.2183584081336], ["quantity", 5], ["title", "Video Input System"], ["updated_at", "2017-03-02 20:58:36.076050"], ["user_id", 1]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "products" ("created_at", "price", "quantity", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", "2017-03-02 20:58:36.731032"], ["price", 88.0772089870151], ["quantity", 5], ["title", "Portable Tuner"], ["updated_at", "2017-03-02 20:58:36.731032"], ["user_id", 1]]
+  [1m[36m (1.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "products" ("created_at", "price", "quantity", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", "2017-03-02 20:58:36.735158"], ["price", 74.8900991020606], ["quantity", 5], ["title", "Video Gel Controller"], ["updated_at", "2017-03-02 20:58:36.735158"], ["user_id", 1]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "products" ("created_at", "price", "quantity", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", "2017-03-02 20:58:36.737754"], ["price", 77.8745622836339], ["quantity", 5], ["title", "Remote Output Amplifier"], ["updated_at", "2017-03-02 20:58:36.737754"], ["user_id", 1]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "products" ("created_at", "price", "quantity", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", "2017-03-02 20:58:36.740668"], ["price", 19.2255772589541], ["quantity", 5], ["title", "Output Performance Compressor"], ["updated_at", "2017-03-02 20:58:36.740668"], ["user_id", 1]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "products" ("created_at", "price", "quantity", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", "2017-03-02 20:58:37.258551"], ["price", 6.13816307381491], ["quantity", 5], ["title", "Performance Digital Tuner"], ["updated_at", "2017-03-02 20:58:37.258551"], ["user_id", 1]]
+  [1m[36m (1.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "products" ("created_at", "price", "quantity", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", "2017-03-02 20:58:37.262444"], ["price", 57.7014932015362], ["quantity", 5], ["title", "Tag Bridge"], ["updated_at", "2017-03-02 20:58:37.262444"], ["user_id", 1]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "products" ("created_at", "price", "quantity", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", "2017-03-02 20:58:37.265032"], ["price", 50.0940072565543], ["quantity", 5], ["title", "Disc Side Tuner"], ["updated_at", "2017-03-02 20:58:37.265032"], ["user_id", 1]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "products" ("created_at", "price", "quantity", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", "2017-03-02 20:58:37.267567"], ["price", 34.9884593689914], ["quantity", 5], ["title", "Direct Mount"], ["updated_at", "2017-03-02 20:58:37.267567"], ["user_id", 1]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "products" ("created_at", "price", "quantity", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", "2017-03-02 20:58:37.730986"], ["price", 39.8422224223688], ["quantity", 5], ["title", "Tag System"], ["updated_at", "2017-03-02 20:58:37.730986"], ["user_id", 1]]
+  [1m[36m (1.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "products" ("created_at", "price", "quantity", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", "2017-03-02 20:58:37.735064"], ["price", 75.9962484104634], ["quantity", 5], ["title", "Performance Remote Component"], ["updated_at", "2017-03-02 20:58:37.735064"], ["user_id", 1]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "products" ("created_at", "price", "quantity", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", "2017-03-02 20:58:37.737661"], ["price", 44.6938097968958], ["quantity", 5], ["title", "Side GPS Bridge"], ["updated_at", "2017-03-02 20:58:37.737661"], ["user_id", 1]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "products" ("created_at", "price", "quantity", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", "2017-03-02 20:58:37.740592"], ["price", 94.38106883865], ["quantity", 5], ["title", "HD Remote Amplifier"], ["updated_at", "2017-03-02 20:58:37.740592"], ["user_id", 1]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "products" ("created_at", "price", "quantity", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", "2017-03-02 20:58:38.219226"], ["price", 16.9429449338325], ["quantity", 5], ["title", "GPS Tag Mount"], ["updated_at", "2017-03-02 20:58:38.219226"], ["user_id", 1]]
+  [1m[36m (1.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "products" ("created_at", "price", "quantity", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", "2017-03-02 20:58:38.223217"], ["price", 37.0652486397121], ["quantity", 5], ["title", "GPS Auto Receiver"], ["updated_at", "2017-03-02 20:58:38.223217"], ["user_id", 1]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "products" ("created_at", "price", "quantity", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", "2017-03-02 20:58:38.225811"], ["price", 2.99900774547903], ["quantity", 5], ["title", "Output Bridge"], ["updated_at", "2017-03-02 20:58:38.225811"], ["user_id", 1]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "products" ("created_at", "price", "quantity", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", "2017-03-02 20:58:38.228425"], ["price", 82.2468524133528], ["quantity", 5], ["title", "Auto Tag Compressor"], ["updated_at", "2017-03-02 20:58:38.228425"], ["user_id", 1]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "products" ("created_at", "price", "quantity", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", "2017-03-02 20:58:38.714601"], ["price", 86.3123427159717], ["quantity", 5], ["title", "Input Compressor"], ["updated_at", "2017-03-02 20:58:38.714601"], ["user_id", 1]]
+  [1m[36m (1.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "products" ("created_at", "price", "quantity", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", "2017-03-02 20:58:38.718414"], ["price", 25.8342277679501], ["quantity", 5], ["title", "Input Transmitter"], ["updated_at", "2017-03-02 20:58:38.718414"], ["user_id", 1]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "products" ("created_at", "price", "quantity", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", "2017-03-02 20:58:38.721126"], ["price", 52.3063077351617], ["quantity", 5], ["title", "Air Power Receiver"], ["updated_at", "2017-03-02 20:58:38.721126"], ["user_id", 1]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "products" ("created_at", "price", "quantity", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", "2017-03-02 20:58:38.723779"], ["price", 39.3266265698788], ["quantity", 5], ["title", "Input Mount"], ["updated_at", "2017-03-02 20:58:38.723779"], ["user_id", 1]]
+  [1m[35m (0.7ms)[0m  commit transaction
+
+
+Started GET "/products/" for 127.0.0.1 at 2017-03-02 15:58:41 -0500
+Processing by Api::V1::ProductsController#index as JSON
+  Parameters: {"subdomain"=>"api"}
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "products"
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."auth_token" IS NULL LIMIT 1[0m
+  [1m[35mProduct Load (0.2ms)[0m  SELECT  "products".* FROM "products"  LIMIT 25 OFFSET 0
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+[active_model_serializers]   [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+[active_model_serializers]   [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+[active_model_serializers]   [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+[active_model_serializers]   [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+[active_model_serializers]   [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+[active_model_serializers]   [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+[active_model_serializers]   [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+[active_model_serializers]   [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+[active_model_serializers]   [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+[active_model_serializers]   [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+[active_model_serializers]   [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+[active_model_serializers]   [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (16.32ms)
+Completed 200 OK in 20ms (Views: 18.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/products/" for 127.0.0.1 at 2017-03-02 15:59:43 -0500
+Processing by Api::V1::ProductsController#index as JSON
+  Parameters: {"subdomain"=>"api"}
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "products"
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."auth_token" IS NULL LIMIT 1[0m
+  [1m[35mProduct Load (0.2ms)[0m  SELECT  "products".* FROM "products"  LIMIT 25 OFFSET 0
+[active_model_serializers]   [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+[active_model_serializers]   [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+[active_model_serializers]   [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+[active_model_serializers]   [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+[active_model_serializers]   [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+[active_model_serializers]   [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+[active_model_serializers]   [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+[active_model_serializers]   [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+[active_model_serializers]   [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+[active_model_serializers]   [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+[active_model_serializers]   [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+[active_model_serializers]   [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+[active_model_serializers]   [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (24.02ms)
+Completed 200 OK in 45ms (Views: 38.0ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/products/" for 127.0.0.1 at 2017-03-02 16:02:29 -0500
+Processing by Api::V1::ProductsController#index as JSON
+  Parameters: {"subdomain"=>"api"}
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "products"
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."auth_token" IS NULL LIMIT 1[0m
+  [1m[35mProduct Load (0.2ms)[0m  SELECT  "products".* FROM "products"  LIMIT 25 OFFSET 0
+[active_model_serializers]   [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+[active_model_serializers]   [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+[active_model_serializers]   [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+[active_model_serializers]   [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+[active_model_serializers]   [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+[active_model_serializers]   [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+[active_model_serializers]   [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+[active_model_serializers]   [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+[active_model_serializers]   [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+[active_model_serializers]   [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+[active_model_serializers]   [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+[active_model_serializers]   [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+[active_model_serializers]   [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (24.71ms)
+Completed 200 OK in 46ms (Views: 39.0ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/products/" for 127.0.0.1 at 2017-03-02 16:03:19 -0500
+Processing by Api::V1::ProductsController#index as JSON
+  Parameters: {"subdomain"=>"api"}
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "products"
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."auth_token" IS NULL LIMIT 1[0m
+  [1m[35mProduct Load (0.2ms)[0m  SELECT  "products".* FROM "products"  LIMIT 25 OFFSET 0
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+[active_model_serializers]   [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+[active_model_serializers]   [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+[active_model_serializers]   [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+[active_model_serializers]   [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+[active_model_serializers]   [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+[active_model_serializers]   [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+[active_model_serializers]   [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+[active_model_serializers]   [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+[active_model_serializers]   [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+[active_model_serializers]   [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+[active_model_serializers]   [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+[active_model_serializers]   [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (19.47ms)
+Completed 200 OK in 38ms (Views: 31.6ms | ActiveRecord: 1.4ms)
