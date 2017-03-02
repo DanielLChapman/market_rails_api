@@ -2373,3 +2373,24 @@ Migrating to CreateDelayedJobs (20170302215805)
             FROM sqlite_temp_master
             WHERE name='index_users_on_email' AND type='index'
 
+
+
+Started GET "/products/" for 127.0.0.1 at 2017-03-02 17:00:30 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Api::V1::ProductsController#index as JSON
+  Parameters: {"subdomain"=>"api"}
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "products"
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."auth_token" IS NULL LIMIT 1[0m
+  [1m[35mProduct Load (0.3ms)[0m  SELECT  "products".* FROM "products"  LIMIT 25 OFFSET 0
+Completed 500 Internal Server Error in 38ms
+
+NameError (undefined local variable or method `cached' for ProductSerializer:Class):
+  app/serializers/product_serializer.rb:3:in `<class:ProductSerializer>'
+  app/serializers/product_serializer.rb:1:in `<top (required)>'
+  app/controllers/api/v1/products_controller.rb:8:in `index'
+
+
+  Rendered /Users/Rusty-Mac/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.7ms)
+  Rendered /Users/Rusty-Mac/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /Users/Rusty-Mac/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (10.2ms)
+  Rendered /Users/Rusty-Mac/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (64.6ms)
